@@ -1,0 +1,57 @@
+
+
+.memo {
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin: 10px;
+	background-color: #FFFFDC;
+	box-shadow: 10px 10px 20px -10px #7A7A7A;
+	box-shadow: 5px 5px 20px -10px #7A7A7A;
+}
+
+.memo-list {
+	display: inline-block;
+}
+
+.memo .delete {
+	visibility: hidden;
+}
+
+.memo select {
+	max-width: 100px;
+	min-width: auto;
+}
+
+.memo textarea {
+	min-width: auto;
+	width: 100%;
+	padding: 5px;
+	height: 115px;
+	cursor: pointer;
+	background-color: transparent !important;
+}
+
+.memo .grip {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	padding-right: 7px;
+	float: right;
+	text-align: center;
+	cursor: move;
+}
+
+.memo.animation {
+	transition: .3s linear;
+	width: 350px;
+	height: 350px;
+	transform: rotate(0deg) !important;
+}
+
+.memo.animation textarea {
+	height: 315px;
+}
+

@@ -1,0 +1,1092 @@
+
+
+/*--[ init ]-------------------------------------------------------------------------*/
+
+* {
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: arial;
+	line-height: 20px;
+	vertical-align: top;
+	outline: none;
+	font-family: open_sansregular;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	color: #333;
+}
+
+a {
+	color: inherit;
+}
+
+h1 {
+	font-size: 1.8em;
+	margin: 20px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+th,
+label {
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+input, select, textarea {
+	min-width: 200px;
+	background-color: white;
+	padding: 0 3px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+	min-width: inherit;
+}
+
+iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+li {
+	margin-left: 10px;
+	padding-left: 10px;
+}
+
+hr {
+	height: 14px;
+	line-height: 14px;
+	margin: 10px 0;
+	text-align: center;
+	background: rgba(0,0,0,.1);
+	bbackground: url(../img/overlay10.png) repeat;
+}
+
+hr::after {
+    color: white;
+    content: "\273D \273D \273D";
+    letter-spacing: 1em;
+}
+
+[title]:after {
+	cursor: help;
+	content: ' *';
+	color: red;
+}
+
+[title].hideasterisk:after {
+	content: none;
+}
+
+label[for] {
+	cursor: pointer;
+}
+
+
+
+/*--[ misc ]--------------------------------------------------------------------------*/
+
+
+#security_warning {
+	background-color: rgba(255,0,0,.5);
+	text-align: center;
+	padding: 4px;
+}
+
+
+/* https://coderwall.com/p/uer3ow/total-input-type-file-style-control-with-pure-css */
+
+.styled-file {
+	width: 35px;
+	height: 25px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #C1C5D3;
+	color: white;
+	font-weight: bold;
+	line-height: 25px;
+	vertical-align: middle;
+	background: #C1C5D3 url(../img/upload.png) no-repeat center center;
+	background-size: 20px 20px;
+}
+
+.styled-file [type=file] {
+	display: block;
+	font-size: 999px;
+	min-height: 100%;
+	min-width: 100%;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	pposition: absolute;
+	left: -100px;
+	text-align: right;
+	top: 0;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.save,
+.icosave,
+.delete,
+.cantdelete,
+.drop,
+.link,
+.trash,
+.watch,
+.icowatch,
+.order {
+	background: red url(../img/save.png) no-repeat scroll center center / 20px 20px;
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+	cursor:pointer;
+	overflow: hidden;
+	line-height: 100px;
+	padding: 15px;	/* not very precise on index page and elsewhere... */
+}
+
+.icosave,
+.icowatch {
+	background-color: transparent;
+}
+
+.trash {
+	background: url(../img/trash.png) no-repeat scroll center center / 20px 20px;
+}
+
+.delete,
+.drop {
+	background: url(../img/remove.png) no-repeat scroll center center / 20px 20px;
+}
+
+.cantdelete {
+	cursor: default;
+	background: url(../img/removenot.png) no-repeat scroll center center / 20px 20px;
+}
+
+.link {
+	background: url(../img/link.png) no-repeat scroll center center / 20px 20px;
+}
+
+.watch,
+.icowatch {
+	background: url(../img/watch.png) no-repeat scroll center center / 20px 20px;
+}
+
+.order {
+	background: url("images/ui-icons_222222_256x240.png");		/* eq. .ui-icon */
+	background-position: -128px -48px;									/* eq. .ui-icon-arrowthick-2-n-s */
+	background-size: auto;
+	padding: 0 !important;
+	margin-top: 6px;
+}
+
+
+.special {
+	color: #f91818;
+}
+
+
+.autoclickbutton tbody tr {
+	cursor: pointer;
+}
+
+
+#wallpapers,
+#wallpapers_light {
+	height: 0;
+	overflow: hidden;
+}
+
+.savenew input:not([readonly]),
+.savenew select:not([readonly]),
+.savenew textarea:not([readonly]),
+#SAVEcardNew input:not([readonly]),
+#SAVEcardNew select:not([readonly]),
+#SAVEcardNew textarea:not([readonly]),
+#SAVEpluginNew input:not([readonly]),
+#SAVEpluginNew select:not([readonly]),
+#SAVEpluginNew textarea:not([readonly]),
+#SAVEuserNew input:not([readonly]),
+#SAVEuserNew select:not([readonly]),
+#SAVEuserNew textarea:not([readonly]),
+#SAVEdocNew input:not([readonly]),
+#SAVEdocNew select:not([readonly]),
+#SAVEdocNew textarea:not([readonly]),
+.new {
+	background-color: #FAFAFA;
+	border-bottom: 1px #DDD solid;
+}
+
+.changed {
+/*
+	border: 2px red solid !important;
+	border-radius: 3px;
+*/
+	outline: 2px red solid !important;
+	-khtml-outline-radius: 3px;
+	-moz-outline-radius: 3px;
+	-ms-outline-radius: 3px;
+	-o-outline-radius: 3px;
+	-webkit-outline-radius: 3px;
+	outline-radius: 3px;
+}
+
+.addressource span {
+	display: none;
+}
+
+.downloadable {
+	display: block;
+	overflow: hidden;
+	margin: auto;
+	width: 24px;
+	height: 20px;
+	background: url(../img/download.png) no-repeat top left / 24px 20px;
+	color: white !important;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	bbackground: url(../img/overlay.png) repeat top left;
+	z-index: 200;
+}
+
+#overlay>div {
+	position:absolute;
+	top:0; left:0; bottom:0; right:0;
+	margin: auto;
+	width: 200px; 
+	height: 200px;
+}
+
+#bee {
+	background: url(../img/bee.gif) no-repeat center center;
+	width: 100px; 
+	height: 100px;
+	margin: auto;
+}
+
+#overlay p {
+	text-align: center;
+	color: white;
+	text-shadow: 0 0 10px black;
+}
+
+#progressbar {
+	width: 100px;
+	height: 3px;
+	background-color: #F1F1F1;
+	margin: auto;
+}
+
+#progressbar>div {
+	width:0px;
+	height: 3px;
+	background-color: blue;
+}
+
+
+#progressbtn {
+	text-align: center;
+	margin: 20px 0;
+}
+
+
+
+
+/*--[ connexion ]--------------------------------------------------------------------*/
+
+#connexion {
+	height: 100%;
+}
+
+#connexion>body>div {
+	padding-top: 30px;
+}
+
+#connexion {
+	background: url(../img/bg-light.jpg) repeat-x 0 0;
+	background-size: auto 100%;
+}
+
+#connexion #logo {
+	background: url(../img/logo4-2-2.png) no-repeat 0 0;
+	background-size: contain;
+	width: 150px;
+	height: 40px;
+	padding-left: 50px;
+	line-height: 40px;
+	vertical-align: bottom;
+	font-family: jurabook;
+	font-size: 40px;
+	color: white;
+	margin: 20px auto;
+	float: none !important;
+}
+
+#connexion body {
+	background: url(../img/bg-connect.png) repeat fixed;
+}
+
+#connexion article {
+	max-width: 550px;
+	margin: auto;
+	padding-top: 100px;
+	background: rgba(0,0,0,.5);
+	bbackground: url(../img/overlay.png) repeat;
+	padding: 40px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+#connexion label {
+	color: white;
+	line-height: 25px;
+	vertical-align: middle;
+	float: left;
+}
+
+#connexion input {
+	border-radius: 3px;
+}
+
+#connexion input[type=submit] {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#connexion p {
+	color: white;
+}
+
+#connexion .slide,
+#connexion .unslide {
+	margin-top: 20px;
+	text-decoration: none;
+	color: #C7C7C7;
+	cursor: pointer
+}
+
+#connexion .slide {
+	text-align: center;
+}
+
+#connexion .slide:hover,
+#connexion .unslide:hover {
+	color: white;
+}
+
+
+
+#connexion #slider {
+	width: 10000px;
+}
+
+#connexion .diapo {
+	width: 550px;
+	padding-right: 80px;
+	float: left;
+}
+
+
+
+/*--[ base ]-------------------------------------------------------------------------*/
+
+main {
+	background: url(../img/bgcolumn1000-overlay80.png) repeat-y 0 -1000px;
+}
+
+main>section {
+	padding: 30px;
+}
+
+main>aside {
+	float: left;
+	width: 350px;
+	overflow: hidden;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+aside * {
+	color: #E1E1E1;
+}
+
+main>aside h1 {
+	font-family: jurabook;
+	font-size: 25px;
+	width: auto;
+	padding: 0 5px;
+}
+
+aside p,
+aside ul,
+aside h2,
+aside h3 {
+	padding: 10px 20px;
+}
+
+aside p:hover,
+aside ul:hover,
+aside h2:hover,
+aside h3:hover {
+	background-color: lightGrey;
+	color: #3B3B3B;
+}
+
+aside p:hover *,
+aside ul:hover *,
+aside h2:hover *,
+aside h3:hover * {
+	background-color: lightGrey;
+	color: #3B3B3B;
+}
+
+aside a {
+	font-size: 1.2em;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+aside .button {
+	margin-top: 30px;
+}
+
+aside button,
+aside .button {
+	display: inline-block;
+	clear: both;
+	margin: 10px 20px;
+	padding: 4px 10px; 
+	background-color: grey;
+	color: white;
+	text-decoration: none;
+	border: 1px darkGrey solid;
+	border-radius: 6px;
+	border-shadow: 3px 3px 3px grey;
+	text-align: center;
+	cursor: pointer;
+}
+
+aside button:hover,
+aside .button:hover{
+	background-color: #9F9F9F;
+}
+
+
+
+
+
+
+
+/*--[ header ]-----------------------------------------------------------------------*/
+
+header {
+	background: rgba(0,0,0,.6);
+	bbackground: url(../img/overlay60.png) repeat;
+}
+
+header * {
+	color: #E1E1E1;
+}
+
+#logo {
+	width: 80px;
+	height: 60px;
+	background: url(../img/logo4-2-2.png) no-repeat center center;
+	background-size: 40px;
+	cursor: pointer;
+	float: left;
+	margin: 5px;
+}
+
+header a {
+	line-height: 70px;
+	vertical-align: middle;
+	display: inline-block;
+	width: 110px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-weight: bold;
+	margin: 0 7px;
+/*
+	font-family: jurabook;
+	font-size: 20px;
+	width: auto;
+	padding: 0 5px;
+*/
+}
+
+header a:hover {
+	background-color: #E1E0E0;
+	color: #3B3B3B;
+}
+
+header .current {
+	line-height: 66px;
+	background: rgba(255,255,255,.1);
+	bbackground: url(../img/overlayw10.png) repeat;
+	border-bottom: 4px grey solid;
+}
+
+
+header>nav>select {
+	width: calc(100% - 100px);
+	height: 40px;
+	padding: 5px;
+	margin: 15px 0;
+	color: #1F1F1F;
+}
+header>nav>select>option {
+	color: #1F1F1F;
+}
+
+
+/*--[ dashboard ]--------------------------------------------------------------------*/
+
+#content.dashboard #search {
+	text-align: center;
+}
+
+#content.dashboard #search button {
+	background-color: white;
+}
+
+#content.dashboard #search * {
+	border: 1px darkGrey solid;
+	border-radius: 3px;
+	min-width: 100px;
+	height: 35px;
+}
+
+#content.dashboard #ilquery {
+	display: block;
+	min-width: 404px;
+	margin:auto;
+	margin-bottom: 5px;
+}
+
+#content.dashboard button {
+	cursor: pointer;
+}
+
+#content.dashboard article.half {
+	width: calc(50% - 50px);
+	float: left;
+}
+
+#content.dashboard article.half:nth-child(even) {
+	margin-right: 20px;
+}
+
+#content.dashboard article.full {
+	clear: both;
+}
+
+#content.dashboard .historic .styled-file {
+	display: inline-block;
+}
+
+#content.dashboard .ticket #SAVEticketNew {
+	display: none;
+}
+
+#content.dashboard .ticket .col-four {
+	width: 50%;
+}
+
+
+#google {
+	background: url(../img/google.png) no-repeat center center;
+}
+
+#bing {
+	background: url(../img/bing.png) no-repeat center center;
+}
+
+#yahoo {
+	background: url(../img/yahoo.png) no-repeat center center;
+}
+
+#duckduckgo {
+	background: url(../img/duckduckgo.png) no-repeat center center;
+}
+
+
+.task tr * {
+	background-color: #E2FFE3
+
+}
+
+.task .imhere {
+	background-image: url(../img/trash-red.png);
+}
+
+.task .willremove,
+.task .willremove * {
+	background-color: pink;
+}
+
+.task tr:first-of-type,
+.task tr:last-of-type,
+.task tr:first-of-type *,
+.task tr:last-of-type * {
+	background-color: transparent;
+}
+
+
+
+
+/*--[ content ]----------------------------------------------------------------------*/
+
+#content {
+	max-width: 1500px;
+	min-height: 400px;
+	margin: auto;
+	padding-left: 380px;
+}
+
+#content:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#content article {
+	position: relative;
+	background: rgba(255,255,255,.9);
+	bbackground: url(../img/overlayw90.png) repeat;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	padding: 70px 20px;
+	margin-bottom: 30px;
+}
+
+article input:hover,
+article select:hover,
+article textarea:hover {
+	background-color: #DEDEDE;
+}
+
+article h2 {
+	position:absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 15px;
+	text-align: center;
+	text-transform: capitalize;
+	font-family: jurabook;
+	font-size: 25px;
+	background: rgba(0,0,0,.1);
+	bbackground: url(../img/overlay10.png) repeat;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+
+article h2 button,
+article h3 button {
+	float: right;
+}
+
+article h3 {
+	padding: 10px;
+	margin: 20px 0;
+	text-align: center;
+	background: rgba(0,0,0,.1);
+	bbackground: url(../img/overlay10.png) repeat;
+}
+
+article h4 {
+	padding: 10px;
+	margin: 20px 0;
+	text-align: center;
+}
+
+article p,
+article div {
+	margin-bottom: 7px;
+}
+
+article label:not(.ui-button) {
+	display: inline-block;
+	min-width: 200px;
+}
+
+article table input {
+	width: 100%;
+}
+
+article input,
+article select,
+article textarea {
+	height: 25px;
+	min-height: 25px;
+}
+
+
+
+
+
+/*--[ datatable search box ]---------------------------------------------------------*/
+
+#search {
+	margin: auto;
+	max-width: 600px;
+	padding: 20px;
+	margin-bottom: 30px;
+	border-radius: 7px;
+	background: rgba(255,255,255,.9);
+	bbackground: url(../img/overlayw90.png) repeat;
+	text-align: center;
+}
+
+#search input {
+	box-shadow: 0 0 15px #ccc;
+}
+
+#datatable_filter {
+	display: none;
+}
+
+.dataTable tbody td {
+	cursor: pointer;
+}
+
+.dataTable td strong {
+	color: #AF5800;
+}
+
+
+
+/*--[ jQuery ]-----------------------------------------------------------------------*/
+
+.ui-state-default {
+	background: rgba(0,0,0,.1) !important;
+}
+
+.ui-state-active {
+	background: white !important;
+}
+
+.ui-datepicker {
+	z-index: 100 !important;
+}
+
+
+/*--[ dataTable ]--------------------------------------------------------------------*/
+
+.dataTable {
+}
+
+.dataTables_wrapper,
+.dataTables_wrapper table,
+.dataTables_filter {
+	float: none !important;
+	clear: none !important;
+}
+
+.dataTables_length {
+	width: 100%;
+	height: 5px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	background: rgba(255,255,255,.9);
+	bbackground: url(../img/overlayw90.png) repeat;
+}
+
+.dataTables_length * {
+	display: none;
+}
+
+.dataTables_filter {
+	margin-bottom: 30px;
+}
+
+.dataTable thead tr {
+	background: rgba(255,255,255,.9);
+	bbackground: url(../img/overlayw90.png) repeat;
+}
+
+.dataTable thead th,
+.dataTable.no-footer {
+	border-bottom: none !important;
+}
+
+.dataTable .odd {
+	background: rgba(255,255,255,.85);
+	bbackground: url(../img/overlayw85.png) repeat;
+}
+
+.dataTable .even {
+	background: rgba(255,255,255,.9);
+	bbackground: url(../img/overlayw90.png) repeat;
+}
+
+.dataTable .odd:hover,
+.dataTable .even:hover {
+	background: rgba(0,0,0,.9);
+	bbackground: url(../img/overlay90.png) repeat;
+	color: lightGrey;
+}
+
+.dataTables_paginate {
+	background: rgba(255,255,255,.9);
+	bbackground: url(../img/overlayw90.png) repeat;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	float: none !important;
+	text-align: center !important;
+	padding: 10px !important;
+}
+
+#search_paginate a {
+	color: inherit;
+}
+
+
+
+
+
+
+/*--[ log ]--------------------------------------------------------------------------*/
+
+table input,
+table select,
+table textarea {
+	width: 100%;
+	min-width: inherit;
+}
+
+table .styled-file {
+	display: block;
+	margin: auto;
+}
+
+table textarea {
+	resize: vertical;
+}
+
+table label,
+table th {
+	text-align: center;
+}
+
+table .header {	/* tablesorter only */
+	cursor: pointer;
+}
+
+table .save,
+table .watch,
+table .cantdelete,
+table .delete {
+	display: inline-block;
+	margin-left: 3px;
+}
+
+col {
+	width: 10%;
+}
+
+.user .col-three,
+.user .col-four {
+	width: 5%;
+}
+
+.relance td {
+	text-align: center;
+}
+
+.document .col-three,
+.document .col-four,
+.document .col-five {
+	width: 2%;
+}
+
+.document .download col {
+	width: 20%;
+}
+
+.log .col-three {
+	width: 65%;
+}
+
+.log .col-five {
+	width: 5%;
+}
+
+.version .col-two {
+	width: 20%;
+}
+
+.version .col-four {
+	width: 40%;
+}
+
+.project .ticket .col-six {
+	width: 0;
+}
+
+.project .ticket .col-three {
+	width: 60%;
+}
+
+.ticket .ticket .col-one {
+	width: 20%;
+}
+
+.ticket .ticket .col-four {
+	width: 30%;
+}
+
+.ticket .ticket .col-six {
+	width: 5%;
+}
+
+/*
+.ticketdetail .col-three {
+	width: 45%;
+}
+
+.ticketdetail .col-seven {
+	width: 5%;
+}
+*/
+
+#content.user .role tr > *:nth-child(1),
+#content.project .role tr > *:nth-child(1),
+#content.project .ticket tr > *:nth-child(1) {
+	display: none;
+}
+
+.role .col-four {
+	width: 3%;
+}
+
+.plugin .col-one {
+	width: 20%;
+}
+
+#content.project .role .col-three {
+	width: 3%;
+}
+
+#SAVEcardNew textarea,
+#SAVEcard textarea,
+#SAVEuser textarea,
+#SAVEuserNew textarea,
+#SAVEplugin textarea,
+#SAVEpluginNew textarea {
+	width: 60%;
+	height: 70px;
+}
+
+.hover input:hover,
+.hover textarea:hover,
+.hover select:hover,
+.hover tr:hover,
+.hover tr:hover input,
+.hover tr:hover select,
+.hover tr:hover textarea {
+	background-color: #F1F1F1 !important;
+}
+/*
+option {
+	background-color: transparent !important;
+}
+*/
+
+
+/*--[ about ]------------------------------------------------------------------------*/
+
+#about-this-software {
+	background: rgba(0,0,0,.7);
+	bbackground: url(../img/overlay70.png) repeat;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#about-this-software>div {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+}
+
+#about-this-software h2 {
+	position: relative;
+}
+
+#about-this-software * {
+	background: none;
+	color: #FFD003 !important;
+}
+ 
+
+
+/*--[ footer ]-----------------------------------------------------------------------*/
+
+footer {
+	position: relative;
+	clear: both;
+	padding: 30px;
+	background: rgba(0,0,0,.6);
+	bbackground: url(../img/overlay60.png) repeat;
+}
+
+footer * {
+	color: #E1E1E1;
+}
+
+footer p {
+	text-align: right;
+}
+
+.ideelab {
+	font-style: italic;
+}
+
+.digital {
+	color: #fac61b;
+	font-weight: bold;
+}
+
+

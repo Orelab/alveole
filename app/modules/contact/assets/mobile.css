@@ -1,0 +1,18 @@
+
+
+@media (max-width: 820px) {
+
+
+	#content.contact tr > th:nth-child(3),	/* hide mail */
+	#content.contact tr > *:nth-child(3),
+	#content.contact tr > th:nth-child(4),	/* hide roles */
+	#content.contact tr > *:nth-child(4) {
+		display: none;
+	}
+	
+	#content.contact tr > th,
+	#content.contact tr > td {
+		width: 50%;
+	}
+	
+}

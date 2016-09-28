@@ -1,0 +1,85 @@
+/*--[ CALENDAR ]---------------------------------------------------------------------*/
+
+
+#content.calendar article {
+	background: none;
+	padding: 0;
+}
+
+#content.calendar hr::after {
+    content: none;
+}
+
+.calendrier {
+	background: url(../img/overlayw80.png) repeat;
+}
+
+.fc-clear {
+	clear: none !important;
+}
+
+.calendrier .fc-view-container {
+	background: url(../img/overlayw90.png) repeat;
+}
+
+.calendrier h2 {
+	position: relative;
+	color: #E1E1E1;
+	text-shadow: 0 0 8px black;
+	border: none;
+	background-color: transparent !important;
+	background-image: none !important;
+	padding: 0;
+	padding-bottom: 20px;
+}
+
+.calendrier p, .calendrier div {
+	margin-bottom: 0;
+}
+
+.fc-event {
+	color:#fff !important;
+	border: 1px #727272 solid !important;
+	padding: 2px;
+}
+
+.blue, .color101 {
+	background-color: #0d0089 !important;
+}
+
+.green, .color102 {
+	background-color: #00890a !important;
+	ccolor: #333 !important;
+}
+
+.red, .color103 {
+	background-color: #890000 !important;
+}
+
+
+.savenew .half {
+	padding: 10px;
+}
+
+.savenew .half:first-of-type {
+	width: calc(100% - 540px);
+	min-width: 500px;
+}
+
+.savenew .half:last-of-type {
+	padding-top: 60px;
+	max-width: 480px;
+	width: auto;
+}
+
+@media (max-width: 820px) {
+
+	.savenew .half {
+		width: 100%;
+		padding-top: 0;
+	}
+
+}
+
+
+

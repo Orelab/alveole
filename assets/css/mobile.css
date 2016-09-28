@@ -1,0 +1,152 @@
+
+/*--[mobile]------------------------------------------------------------------*/
+
+
+@media (max-width: 820px) {
+
+	#connexion>body {
+		background: url(../img/overlay.png) repeat;
+	}
+
+	#connexion body>div {
+		padding-top: 0;
+	}
+	
+	#connexion article {
+		border-radius: 0;
+		background: none;
+	}
+
+	#content.dashboard #ilquery {
+		min-width: auto;
+	}
+
+	main>section#content {
+		padding: 0 !important;
+	}
+	
+	#content>article,
+	#content>#search {
+		margin: 0 !important;
+		border-radius: 0 !important;
+	}
+
+	.half {
+		display: block !important;
+		width: inherit !important;	
+		margin-right: 0 !important;
+		float: none !important;
+	}
+	
+	hr {
+		height: 0;
+		line-height: 0;
+		text-align: center;
+		margin: 0;
+	}
+	hr::after {
+	    content: "";
+	    letter-spacing: 0;
+	}
+
+	h1 {
+		margin: 10px;
+	}
+
+	h2 {
+		border-radius: 0 !important;
+	}
+
+	article input,
+	article select,
+	article textarea {
+		min-width: inherit;
+		min-height: 35px;
+	}
+	
+	table th,
+	table td,
+	table.dataTable tbody th,
+	table.dataTable tbody td {
+	    padding-top: 14px;
+	    padding-bottom: 14px;
+	}
+
+	#logo {
+		width: 63px;
+	}
+	
+	header a {
+		width: auto;
+	}
+	
+	header .styled-select {	
+		width: 100px;
+	}
+	
+	header select {
+	    width: 130px;
+	}
+
+
+	main {
+		background-image: none;
+	}
+	
+	#menu {
+		float: none;
+		width: 100% !important;
+		min-height: 0;
+		background: url(../img/overlay80.png) repeat;;
+		text-align: center;
+	}
+	
+	#menu h1 {
+		text-align: center;
+	}
+	
+	#menu p {
+		display: inline-block;
+		margin: 5px;
+	}
+	
+	#content {
+		padding-left: 30px !important;
+	}
+
+	aside p,
+	aside ul,
+	aside h2,
+	aside h3 {
+		padding: 0;	
+	}
+	
+	#search {
+		max-width: inherit;	
+	}
+	
+	article {
+		padding: 0 5px 20px;
+	}
+	
+	article label {
+		min-width: 100px;
+	}
+
+	#content.document #search tr > *:nth-child(2),
+	.dashboard .ticket tr > *:nth-child(2) {
+		display: none;
+	}
+	
+	.dataTables_length,
+	#datatable_paginate {
+		border-radius: 0 !important;	}
+
+	.dataTables_wrapper .dataTables_paginate {
+		margin-top: 0 !important;	
+	}
+
+	footer {
+		padding: 15px;
+	}
+}

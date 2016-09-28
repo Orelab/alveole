@@ -1,0 +1,21 @@
+
+#content.user .dataTable td:nth-child(2),
+#content.user .dataTable td:nth-child(3),
+#content.user .dataTable td:nth-child(4) {
+	text-align: center;
+}
+
+
+article.contact .ui-sortable>div>input:first-child {
+	font-weight: bold;
+	background-color: transparent;
+}
+
+article.contact .ui-sortable>div>input:first-child:hover {
+	background-color: white;
+}
+
+
+article.contact .ui-sortable textarea {
+	min-height: 100px;
+}

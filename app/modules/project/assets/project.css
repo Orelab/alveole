@@ -1,0 +1,89 @@
+
+
+
+//-- tickets in widget & project
+
+#content .ticket tbody td {
+	cursor: pointer;
+}
+
+#content .ticket table {
+	width: 100%;
+}
+
+#content.dashboard .ticket tbody button {
+	width: 0px;
+	visibility: hidden;
+}
+
+
+
+
+//-- tickets in widget only
+
+#content.dashboard .ticket td {
+	width: 10%;
+}
+#content.dashboard .ticket td:nth-child(4) {
+	width: 50%;
+}
+
+#content.dashboard .ticket td:nth-child(3),
+#content.dashboard .ticket td:nth-child(5),
+#content.dashboard .ticket td:nth-child(6) {
+	text-align: center;
+}
+
+
+//-- tickets in project only
+
+#content.project .ticket tbody button {
+	visibility: hidden;
+}
+
+#content.project .ticket td:nth-child(3),
+#content.project .ticket td:nth-child(5),
+#content.project .ticket td:nth-child(6) {
+	text-align: center;
+}
+
+#content.project .ticket td:nth-child(1) {
+	width: 20%;
+}
+
+#content.project .ticket td:nth-child(7) {
+	width: 0%;
+}
+
+
+
+
+
+#content.project .mce-tinymce {
+    min-height: 400px;
+    overflow: hidden;
+}
+
+#content.dashboard .bill-unpaid table {
+	width: 100%;
+}
+
+#content.dashboard .bill-unpaid td {
+	text-align: center;
+}
+
+
+
+
+
+//-- ticket details in project only
+
+.ui-dialog .ticketdetail td {
+	width: 12%;
+}
+
+.ui-dialog .ticketdetail td:nth-child(3) {
+	width: 28%;
+}
+
+

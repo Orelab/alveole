@@ -1,0 +1,278 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-09-20 10:57+0200\n"
+"PO-Revision-Date: 2016-09-20 13:54+0200\n"
+"Last-Translator: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
+"Language-Team: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ../../..\n"
+
+#: ../../../controllers/Bill.php:32
+msgid "Unpaid bills"
+msgstr "Factures impayées"
+
+#: ../../../controllers/Project.php:62
+msgid "projects"
+msgstr "projets"
+
+#: ../../../controllers/Project.php:70
+msgid "Historic"
+msgstr "Historique"
+
+#: ../../../controllers/Project.php:75
+msgid "Opened tickets"
+msgstr "Tickets ouverts"
+
+#: ../../../controllers/Project.php:80
+msgid "late payment"
+msgstr "Retards de paiement"
+
+#: ../../../controllers/Project.php:185
+msgid "Project monitoring"
+msgstr "Suivi de projet"
+
+#: ../../../controllers/Ticket.php:93
+msgid "The incident as been updated"
+msgstr "L'incident a été mis à jour"
+
+#: ../../../controllers/Ticket.php:94
+msgid "A new incident as been created"
+msgstr "Un nouvel incident a été déclaré"
+
+#: ../../../controllers/Ticket.php:98
+msgid "Check the incident history"
+msgstr "Consulter l'historique de l'incident"
+
+#: ../../../views/bill-unpaid.php:5 ../../../views/bill.php:5
+msgid "none"
+msgstr "aucun"
+
+#: ../../../views/bill-unpaid.php:6 ../../../views/bill.php:6
+msgid "daily"
+msgstr "quotidien"
+
+#: ../../../views/bill-unpaid.php:7 ../../../views/bill.php:7
+msgid "weekly"
+msgstr "hebdomadaire"
+
+#: ../../../views/bill-unpaid.php:8 ../../../views/bill.php:8
+msgid "monthly"
+msgstr "mensuel"
+
+#: ../../../views/bill-unpaid.php:9 ../../../views/bill.php:9
+msgid "yearly"
+msgstr "annuel"
+
+#: ../../../views/bill-unpaid.php:23 ../../../views/bill.php:23
+msgid "bills"
+msgstr "factures"
+
+#: ../../../views/bill-unpaid.php:28
+msgid "customer"
+msgstr "client"
+
+#: ../../../views/bill-unpaid.php:29 ../../../views/bill.php:42
+#: ../../../views/payment.php:38
+msgid "amount"
+msgstr "montant"
+
+#: ../../../views/bill-unpaid.php:30 ../../../views/bill.php:48
+msgid "outstanding"
+msgstr "restant dû"
+
+#: ../../../views/bill-unpaid.php:31 ../../../views/bill.php:43
+#: ../../../views/historic.php:35 ../../../views/log.php:18
+#: ../../../views/payment.php:39 ../../../views/ticket.php:22
+#: ../../../views/ticketdetail.php:41
+msgid "date"
+msgstr "date"
+
+#: ../../../views/bill-unpaid.php:32 ../../../views/bill.php:44
+msgid "payment period"
+msgstr "délai de paiement"
+
+#: ../../../views/bill-unpaid.php:33 ../../../views/bill.php:45
+#: ../../../views/payment.php:40
+msgid "bill"
+msgstr "facture"
+
+#: ../../../views/bill-unpaid.php:51
+msgid "days"
+msgstr "jours"
+
+#: ../../../views/bill.php:49
+msgid "recurrence"
+msgstr "récurrence"
+
+#: ../../../views/card.php:16
+msgid ""
+"CAUTION ! The url must be strictly the same as the customer's website. "
+"Otherwise, the ticket system won't work properly."
+msgstr ""
+"ATTENTION ! L'url doit être strictement identique au site du client sur "
+"lequel sera installé le module support (en cas contraire, il ne fonctionnera "
+"pas)."
+
+#: ../../../views/card.php:38
+msgid "Project card"
+msgstr "Fiche projet"
+
+#: ../../../views/card.php:45
+msgid "project name"
+msgstr "nom projet"
+
+#: ../../../views/card.php:50
+msgid "url"
+msgstr "url"
+
+#: ../../../views/card.php:58 ../../../views/historic.php:19
+#: ../../../views/log.php:19
+msgid "description"
+msgstr "description"
+
+#: ../../../views/card.php:63
+msgid "API key"
+msgstr "clé d'API"
+
+#: ../../../views/card.php:65
+msgid "generate"
+msgstr "générer"
+
+#: ../../../views/card.php:69
+msgid "is active"
+msgstr "actif"
+
+#: ../../../views/card.php:72
+msgid "in progress"
+msgstr "en cours"
+
+#: ../../../views/card.php:74
+msgid "closed"
+msgstr "clos"
+
+#: ../../../views/card.php:80 ../../../views/dashboard.php:40
+msgid "year"
+msgstr "année"
+
+#: ../../../views/dashboard.php:9
+msgid "Project"
+msgstr "Projets"
+
+#: ../../../views/dashboard.php:12
+msgid "new project"
+msgstr "Nouveau projet"
+
+#: ../../../views/dashboard.php:21
+msgid "search"
+msgstr "rechercher"
+
+#: ../../../views/dashboard.php:37
+msgid "name"
+msgstr "nom"
+
+#: ../../../views/dashboard.php:38
+msgid "opened/totals"
+msgstr "ouverts/totaux"
+
+#: ../../../views/dashboard.php:38
+msgid "ticket"
+msgstr "Tickets"
+
+#: ../../../views/dashboard.php:39 ../../../views/ticketdetail.php:43
+msgid "status"
+msgstr "statut"
+
+#: ../../../views/dashboard.php:41
+msgid "owner"
+msgstr "propriétaire"
+
+#: ../../../views/dashboard.php:55 ../../../views/ticket.php:62
+#: ../../../views/ticketdetail.php:85
+msgid "me"
+msgstr "moi"
+
+#: ../../../views/historic.php:6
+msgid "Note an historic"
+msgstr "Saisie historique"
+
+#: ../../../views/historic.php:24 ../../../views/menu.php:5
+#: ../../../views/ticket.php:20 ../../../views/ticket.php:61
+msgid "project"
+msgstr "Fiche projet"
+
+#: ../../../views/historic.php:30 ../../../views/log.php:17
+msgid "tag"
+msgstr "étiquette"
+
+#: ../../../views/historic.php:40
+msgid "attachment"
+msgstr "pièce-jointe"
+
+#: ../../../views/log.php:20 ../../../views/ticketdetail.php:44
+msgid "file"
+msgstr "doc"
+
+#: ../../../views/menu.php:6
+msgid "historic"
+msgstr "historique"
+
+#: ../../../views/menu.php:7 ../../../views/ticket.php:4
+msgid "tickets"
+msgstr "tickets"
+
+#: ../../../views/menu.php:8
+msgid "billing"
+msgstr "facturation"
+
+#: ../../../views/menu.php:9
+msgid "users"
+msgstr "utilisateurs"
+
+#: ../../../views/payment.php:26
+msgid "payments"
+msgstr "règlements"
+
+#: ../../../views/ticket.php:21 ../../../views/ticketdetail.php:40
+msgid "author"
+msgstr "auteur"
+
+#: ../../../views/ticket.php:23 ../../../views/ticketdetail.php:42
+msgid "message"
+msgstr "message"
+
+#: ../../../views/ticket.php:24
+msgid "last status"
+msgstr "dernier status"
+
+#: ../../../views/ticket.php:25
+msgid "answers"
+msgstr "réponses"
+
+#: ../../../views/ticket.php:63 ../../../views/ticketdetail.php:86
+msgid "now"
+msgstr "maintenant"
+
+#: ../../../views/ticketdetail.php:45
+msgid "cost"
+msgstr "coût"
+
+#~ msgid "enabled"
+#~ msgstr "en cours"
+
+#~ msgid "disabled"
+#~ msgstr "clot"
+
+#~ msgid "Projects"
+#~ msgstr "projets"
+
+#~ msgid "Bills"
+#~ msgstr "Factures"

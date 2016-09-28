@@ -1,0 +1,163 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-09-21 12:55+0200\n"
+"PO-Revision-Date: 2016-09-21 12:55+0200\n"
+"Last-Translator: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
+"Language-Team: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ../../..\n"
+
+#: ../../../views/card.php:5
+msgid "no"
+msgstr "non"
+
+#: ../../../views/card.php:6
+msgid "yes"
+msgstr "oui"
+
+#: ../../../views/card.php:11
+msgid "administrators"
+msgstr "administrateurs"
+
+#: ../../../views/card.php:12
+msgid "customers"
+msgstr "clients"
+
+#: ../../../views/card.php:13
+msgid "team"
+msgstr "team"
+
+#: ../../../views/card.php:41 ../../../views/menu.php:6
+msgid "user card"
+msgstr "fiche utilisateur"
+
+#: ../../../views/card.php:48
+msgid "first name"
+msgstr "prénom"
+
+#: ../../../views/card.php:53
+msgid "last name"
+msgstr "nom"
+
+#: ../../../views/card.php:58 ../../../views/dashboard.php:32
+msgid "company"
+msgstr "entreprise"
+
+#: ../../../views/card.php:63
+msgid "mail"
+msgstr "email"
+
+#: ../../../views/card.php:68
+msgid "phone"
+msgstr "téléphone"
+
+#: ../../../views/card.php:73
+msgid "address"
+msgstr "adresse"
+
+#: ../../../views/card.php:82
+msgid "memo"
+msgstr "mémo"
+
+#: ../../../views/card.php:91
+msgid "allowed to connect"
+msgstr "autorisé à se connecter"
+
+#: ../../../views/card.php:98 ../../../views/dashboard.php:33
+msgid "group"
+msgstr "groupe"
+
+#: ../../../views/card.php:105
+msgid ""
+"<b>Administrators</b> can see everything, and modify everything.<br/>The "
+"<b>team</b> members can see and modify their own projects, and the projects "
+"they are included.<br/>The <b>customers</b> can only see a partial view of "
+"the projects they are included (readonly)."
+msgstr ""
+"Les <b>administrateurs</b> peuvent tout voir, et tout modifier.<br/>\n"
+"Les membres du groupe <b>team</b> peuvent voir et modifier les projets dans "
+"lesquels ils sont référencés.<br/>\n"
+"Les <b>clients</b> ne bénéficient que d'une consultation partielle des "
+"projets dont ils sont membres. "
+
+#: ../../../views/dashboard.php:12 ../../../views/mailsearch.php:15
+msgid "search"
+msgstr "rechercher"
+
+#: ../../../views/dashboard.php:31
+msgid "name"
+msgstr "nom"
+
+#: ../../../views/dashboard.php:33
+msgid ""
+"The site is different depending on the group in which you are classified"
+msgstr "Le site est différent selon le groupe dans lequel vous êtes classé"
+
+#: ../../../views/dashboard.php:34
+msgid "The list of roles in projects"
+msgstr "La liste des rôles attribués dans les projets"
+
+#: ../../../views/dashboard.php:34 ../../../views/menu.php:7
+#: ../../../views/role.php:22
+msgid "roles"
+msgstr "rôles"
+
+#: ../../../views/mailsearch.php:19
+msgid "search in"
+msgstr "rechercher dans"
+
+#: ../../../views/mailsearch.php:21
+msgid "from"
+msgstr "émetteur"
+
+#: ../../../views/mailsearch.php:24
+msgid "to"
+msgstr "destinataire"
+
+#: ../../../views/mailsearch.php:27
+msgid "subject"
+msgstr "sujet"
+
+#: ../../../views/mailsearch.php:30
+msgid "unread"
+msgstr "non lu"
+
+#: ../../../views/mailsearch.php:33
+msgid "all"
+msgstr "tous"
+
+#: ../../../views/menu.php:8
+msgid "mails"
+msgstr "emails"
+
+#: ../../../views/menu.php:9
+msgid "password"
+msgstr "mot de passe"
+
+#: ../../../views/password.php:20
+msgid "change my password"
+msgstr "modifier mon mot de passe"
+
+#: ../../../views/role.php:33
+msgid "project"
+msgstr "Projet"
+
+#: ../../../views/role.php:35
+msgid "role"
+msgstr "rôle"
+
+#~ msgid "Sorry, you are not allowed to change permissions."
+#~ msgstr "Désolé, vous n'êtes pas autorisé à modifier les permissions."
+
+#, fuzzy
+#~ msgid "send a mail"
+#~ msgstr "envoyer un mail"
