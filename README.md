@@ -5,6 +5,7 @@
 
 Please, visit the website http://www.alveole.org for more information !
 
+![Alveole](http://www.alveole.org/assets/gallery1/alveole-business-intelligence.png)
 
 # Installation
 
@@ -39,9 +40,9 @@ Here are some details about the content of this faile
     encryption_key For security, edit this string and put random data here (no need to remember it !).
     max_size The max file size Alveole will be allowed to upload. Note that you'll certainly have to edit your webserver configuration too.
     database
-        hostname The server we your database is (localhost, or something else).
-        username The username alloed to edit the database.
-        password Username's password.
+        hostname The server where your database is located (localhost, or something else).
+        username The username allowed to edit the database.
+        password The username's password.
         database The database name.
 
 
