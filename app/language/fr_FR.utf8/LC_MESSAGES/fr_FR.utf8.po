@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alveole - general\n"
-"POT-Creation-Date: 2016-09-23 14:24+0200\n"
-"PO-Revision-Date: 2016-09-23 14:24+0200\n"
+"POT-Creation-Date: 2016-09-28 11:50+0200\n"
+"PO-Revision-Date: 2016-09-28 11:50+0200\n"
 "Last-Translator: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
 "Language-Team: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
 "Language: fr\n"
@@ -81,7 +81,7 @@ msgstr "annuler"
 msgid "subscribe"
 msgstr "inscription"
 
-#: views/interface.php:78
+#: views/interface.php:73
 msgid ""
 "Warning, the APP folder is located inside the WEB folder. This is a security "
 "hole. Please contact an administrator."
@@ -90,18 +90,28 @@ msgstr ""
 "du site. Ceci présente un risque de sécurité. Merci de prévenir un "
 "administrateur."
 
-#: views/interface.php:138
+#: views/interface.php:85
+msgid ""
+"Warning, default admin account is active. This is a major security hole as "
+"the password is public. Please change the password or remove this account "
+"after creating your own account."
+msgstr ""
+"Attention, le compte par défaut est actif. Ceci est une faille de sécurité "
+"majeure. Vous êtes invité à changer le mot de passe de ce compte, ou à "
+"détruire ce compte après vous être créé votre propre compte."
+
+#: views/interface.php:142
 msgid "takes you to the moon !"
 msgstr "vous embarque pour la Lune !"
 
-#: views/interface.php:141
+#: views/interface.php:145
 msgid "about"
 msgstr "à propos"
 
-#: views/interface.php:144
+#: views/interface.php:148
 msgid "configuration"
 msgstr "configuration"
 
-#: views/interface.php:148
+#: views/interface.php:152
 msgid "disconnect"
 msgstr "déconnexion"

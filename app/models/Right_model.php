@@ -22,6 +22,12 @@ class Right_model extends MY_Model
 	
 	public function allowed( $group, $view )
 	{
+		/*
+			Lot of work to do...
+		*/
+		return true;
+
+
 		$alt = explode('/', $view);
 		if( count($alt)>1 )
 		{

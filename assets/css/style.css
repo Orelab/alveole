@@ -106,7 +106,7 @@ label[for] {
 /*--[ misc ]--------------------------------------------------------------------------*/
 
 
-#security_warning {
+.security_warning {
 	background-color: rgba(255,0,0,.5);
 	text-align: center;
 	padding: 4px;

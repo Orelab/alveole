@@ -18,7 +18,7 @@ class Configuration_model extends MY_Model
 						->get()
 						->row();
 
-		return $row->value ? $row->value : '';
+		return isset($row->value) ? $row->value : false;
 	}
 
 

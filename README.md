@@ -3,6 +3,7 @@
 
 # What is Alveole ?
 
+Please, visit the website http://www.alveole.org for more information !
 
 
 # Installation

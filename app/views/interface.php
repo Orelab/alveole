@@ -8,6 +8,9 @@
 	$config = $CI->configuration_model->getGeneral();
 
 
+	$CI->load->model('user/user_model');
+	$defuser = $CI->user_model->identify( 'nobody@alveole.org', 'changeyourpasswordfirst!' );
+
 ?><!DOCTYPE html>
 <html lang="<?=$lang?>">
 	<head>
@@ -66,9 +69,22 @@
 				if( substr( APPPATH, 0, strlen(FCPATH) ) === FCPATH
 					&& $config['show_warning'] )
 				{
-					echo '<div id="security_warning">'
+					echo '<div class="security_warning">'
 					. _('Warning, the APP folder is located inside the WEB folder.'
 					. ' This is a security hole. Please contact an administrator.')
+					. '</div>';
+				}
+				
+				/*
+					Check if the default account is still active
+				*/
+
+				if( isset($defuser->id) )
+				{
+					echo '<div class="security_warning">'
+					. _('Warning, default admin account is active. This is a major '
+					. 'security hole as the password is public. Please change the '
+					. 'password or remove this account after creating your own account.')
 					. '</div>';
 				}
 	
