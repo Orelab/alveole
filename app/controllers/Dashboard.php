@@ -219,6 +219,14 @@ class Dashboard extends MY_Controller
 		
 		$mail = new PHPMailer;
 
+		/*
+			0 = debug disabled
+			1 = errors + server responses
+			2 = errors + server responses + client messages
+		*/
+		$mail->SMTPDebug = 0;
+
+
 		$mail->isSMTP();
 		$mail->Host = $config['email_server'];
 		$mail->SMTPAuth = true;

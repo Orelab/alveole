@@ -15,10 +15,15 @@
 	<p><a href="configuration/preference"><?=_('my own preferences')?></a></p>
 	<p><a href="configuration/password/<?=$u->id?>"><?=_('my password')?></a></p>
 
+<?php if( is_group('admin') ): ?>
+
 	<hr/>
 
 	<p><a href="configuration/tag"><?=_('manage tags')?></a></p>
 	<p><a href="configuration/user"><?=_('manage users')?></a></p>
+
+<?php endif; ?>
+
 <?php /*
 	<p><a href="configuration/role" rel="Rôles">Gérer les rôles</a></p>
 	<p><a href="configuration/authorization" rel="Droits">Gérer les autorisations</a></p>

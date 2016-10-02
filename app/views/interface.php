@@ -143,14 +143,8 @@
 			
 			<p>
 				<a href="dashboard/about/" class="noajax about" rel="A propos"><?=_('about')?></a>
-
-				<?php if( is_group('admin') ): ?>
 				- <a href="configuration/dashboard" rel="Configuration" class="ajax"><?=_('configuration')?></a>
-				<?php endif ?> 
-
-				<?php if( connected() ): ?>
 				- <a href="<?=base_url()?>dashboard/disconnect/"><?=_('disconnect')?></a>
-				<?php endif; ?>
 			</p>
 			
 			<?php if( $CI->session->userid ): ?>

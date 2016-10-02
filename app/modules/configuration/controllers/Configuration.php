@@ -61,7 +61,10 @@ class Configuration extends MY_Controller
 	}
 	
 	
-	
+/*
+	For now, it's useless,
+	and it's a security hole as it allows to see the mailer's password :/
+		
 	public function general()
 	{
 		$this->load->model('configuration/configuration_model');
@@ -70,7 +73,7 @@ class Configuration extends MY_Controller
 			'general' => $this->configuration_model->getGeneral(true)
 		));
 	}
-
+*/
 
 
 	public function preference()

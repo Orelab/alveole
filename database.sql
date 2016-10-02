@@ -100,7 +100,12 @@ INSERT INTO `configuration` (`key`, `value`, `type`) VALUES
 ('userdefault', '{"language":"en_EN.utf8","mbox":[],"signature":""}', 'hidden'),
 ('userpref1', '{"caltag17":"true","caltag18":"true","caltag19":"true","mailall":"true","mailto":"true","mailsubject":"false","mailunread":"true","mailsearch":"","mailfrom":"true","caltag51":"true","caltag52":"true","caltag60":"true","contactsearch":"","caltag61":"true","biprojectstart":"2016-02-15","biprojectend":"2016-10-15","mainsearchengine":"","documentsearch":"","projectsearch":"","caltag65":"true","caltag66":"true","caltag67":"true","caltag68":"true","caltag71":"true","caltag85":"true","caltag75":"true","caltag86":"true","caltag91":"true","caltag92":"true"}', 'hidden'),
 ('version_database', '1.0', 'readonly'),
-('version_program', '1.0', 'readonly');
+('version_program', '1.0', 'readonly')
+('email_server', '', 'hidden')
+('email_user', '', 'hidden')
+('email_password', '', 'hidden')
+('email_security', '', 'hidden')
+('email_port', '', 'hidden');
 
 -- --------------------------------------------------------
 
