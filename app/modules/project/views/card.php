@@ -26,9 +26,9 @@ $url_warning =
 		<?=_("Project card")?>
 		
 		<button class="ajax icosave"
-			data-href="<?=$id ? 'project/project/save/'.$id : 'project/project/dashboard' ?>"
+			data-href="project/project/save/<?=$id ? $id : '-1' ?>"
 			data-post="<?=$domid ?>"
-			data-redirect="project/project/index/<?=$id?>" 
+			data-redirect="<?=$id ? 'project/project/card/'.$id : 'project/project/dashboard' ?>" 
 			data-destination="page"
 		></button>
 	</h2>
