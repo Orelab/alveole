@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alveole - document\n"
-"POT-Creation-Date: 2016-09-14 18:04+0200\n"
-"PO-Revision-Date: 2016-09-14 18:05+0200\n"
+"POT-Creation-Date: 2016-10-03 19:35+0200\n"
+"PO-Revision-Date: 2016-10-03 19:35+0200\n"
 "Last-Translator: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
 "Language-Team: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
 "Language: fr\n"
@@ -16,78 +16,81 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPath-1: ../../..\n"
 
-#: ../../../controllers/Document.php:41 ../../../controllers/Document.php:62
+#: ../../../controllers/Document.php:46 ../../../controllers/Document.php:67
 msgid "files"
 msgstr "documents"
 
-#: ../../../controllers/Document.php:67 ../../../views/menu.php:8
+#: ../../../controllers/Document.php:72 ../../../views/menu.php:9
 msgid "download"
 msgstr "télécharger"
 
-#: ../../../controllers/Document.php:189
+#: ../../../controllers/Document.php:220
 msgid "This file has been deleted !"
 msgstr "Ce document a été supprimé !"
 
-#: ../../../controllers/Document.php:209
+#: ../../../controllers/Document.php:241
 msgid "file deleted"
 msgstr "document supprimé"
 
-#: ../../../views/card.php:33
+#: ../../../views/card.php:20
 msgid "Download a new file"
 msgstr "Télécharger un nouveau document"
 
-#: ../../../views/card.php:42
+#: ../../../views/card.php:39 ../../../views/dashboard.php:41
 msgid "title"
 msgstr "titre"
 
-#: ../../../views/card.php:49 ../../../views/dashboard.php:42
+#: ../../../views/card.php:46 ../../../views/dashboard.php:45
 msgid "tag"
 msgstr "étiquette"
 
-#: ../../../views/card.php:56 ../../../views/dashboard.php:39
-#: ../../../views/menu.php:4
+#: ../../../views/card.php:53 ../../../views/menu.php:5
 msgid "file"
 msgstr "document"
 
-#: ../../../views/card.php:70
+#: ../../../views/card.php:67
 msgid "format"
 msgstr "format"
 
-#: ../../../views/card.php:75
+#: ../../../views/card.php:72
 msgid "posting date"
 msgstr "date de mise en ligne"
 
-#: ../../../views/card.php:80
+#: ../../../views/card.php:77
 msgid "last update"
 msgstr "dernière mise à jour"
 
-#: ../../../views/card.php:85
+#: ../../../views/card.php:82
 msgid "number of downloads"
 msgstr "nombre de téléchargements"
 
-#: ../../../views/dashboard.php:8
+#: ../../../views/card.php:83
+msgid "none"
+msgstr "aucun"
+
+#: ../../../views/dashboard.php:12
 msgid "new file"
 msgstr "nouveau document"
 
-#: ../../../views/dashboard.php:17
+#: ../../../views/dashboard.php:21
 msgid "search"
 msgstr "rechercher"
 
-#: ../../../views/dashboard.php:38
-msgid "name"
-msgstr "nom"
+#: ../../../views/dashboard.php:42
+msgid "owner"
+msgstr "propriétaire"
 
-#: ../../../views/dashboard.php:40
+#: ../../../views/dashboard.php:43
 msgid "read"
 msgstr "lu"
 
-#: ../../../views/dashboard.php:41
+#: ../../../views/dashboard.php:44
 msgid "share"
 msgstr "partages"
 
-#: ../../../views/dashboard.php:43
-msgid "ressource"
-msgstr "ressource"
+#: ../../../views/dashboard.php:57
+msgid "me"
+msgstr "moi"
 
 #: ../../../views/download.php:4
 msgid "download log"
@@ -129,11 +132,11 @@ msgstr "non connecté"
 msgid "unknown"
 msgstr "inconnue"
 
-#: ../../../views/menu.php:5 ../../../views/share.php:20
+#: ../../../views/menu.php:6 ../../../views/share.php:20
 msgid "shares"
 msgstr "partages"
 
-#: ../../../views/menu.php:6
+#: ../../../views/menu.php:7
 msgid "downloads"
 msgstr "téléchargements"
 
@@ -144,6 +147,12 @@ msgstr "voir"
 #: ../../../views/share.php:36
 msgid "public acces"
 msgstr "accès public"
+
+#~ msgid "Sorry, you are not allowed."
+#~ msgstr "Désolé, vous n'êtes pas autorisé à accéder à cette zone."
+
+#~ msgid "ressource"
+#~ msgstr "ressource"
 
 #~ msgid "Coming soon"
 #~ msgstr "Bientôt"

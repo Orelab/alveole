@@ -103,11 +103,14 @@ class Document extends MY_Controller
 		$doc = $this->document_model->getDocuments($id);
 		$doc = $doc ? $doc[0] : null;
 
-		//$this->menu();
-		$this->load->view( 'menu', array(
-			'id'					=> $id,
-			'name'				=> $doc ? $doc->name : ''
-		));
+		if( $id>0 )
+		{
+			$this->load->view( 'menu', array(
+				'id'					=> $id,
+				'name'				=> $doc ? $doc->name : ''
+			));
+		}
+
 		
 		$this->load->view( 'card', array(
 			'domid'				=> $doc ? 'SAVEdoc' : 'SAVEdocNew',
@@ -201,15 +204,21 @@ class Document extends MY_Controller
 		//	if( ! api_authentification() ) return;		
 		}
 		
+		$user = currentUser();
+		
 		$this->load->model('document_model');
 		$this->load->model('download_model');
 
 		if( is_numeric($id) )
-			$doc = $this->document_model->getDocuments($id);
+			$doc = $this->document_model->getDocuments($id, null, $user->id);
 			else
-			$doc = $this->document_model->getDocuments(null, $id);	// get document by filename (but which one ?)
+			$doc = $this->document_model->getDocuments(null, $id, $user->id);	// get document by filename (but which one ?)
 
-		if( ! count($doc) ) die( _("This file has been deleted !") );
+
+		if( ! count($doc) )
+		{
+			die( _("This file has been deleted !") );
+		}
 
 		$dir = $this->config->item('upload_path');
 		$file = $dir . $doc[0]->file_name;
@@ -231,15 +240,19 @@ class Document extends MY_Controller
 		}
 		die( _('file deleted') );
 	}
-	
-	
-	//
-	//	The $_SESSION is altered by CodeIgniter so we can't retrieve $_SESSION[upload_progress_*]
-	//	With PHP 5.6 and after, a function  session_reset() could save us, but for the moment we
-	//	prefer to keep the compatibility with PHP5.3 and PHP5.4
-	//
-	//	So, please use p.php instead of this method. 
-	//
+
+
+
+
+	/*
+
+		The $_SESSION is altered by CodeIgniter so we can't retrieve $_SESSION[upload_progress_*]
+		With PHP 5.6 and after, a function  session_reset() could save us, but for the moment we
+		prefer to keep the compatibility with PHP5.3 and PHP5.4
+		
+		So, please use p.php instead of this method.
+
+	*/
 	public function progress()
 	{
 		//	session_reset();

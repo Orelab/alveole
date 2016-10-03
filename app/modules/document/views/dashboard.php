@@ -1,4 +1,8 @@
+<?php
 
+	$c = currentUser();
+
+?>
 
 <?php if( ! is_group('client') ): ?>
 
@@ -25,9 +29,8 @@
 <nav>
 	<table id="datatable" class="autoclickbutton">
 		<colgroup>
-			<col style="width:35%;">
-			<col style="width:35%">
-			<col style="width:10%">
+			<col style="width:40%">
+			<col style="width:20%">
 			<col style="width:10%">
 			<col style="width:10%">
 			<col style="width:10%">
@@ -36,13 +39,10 @@
 		<thead>
 			<tr>
 				<th><?=_('title')?></th>	
-				<th><?=_('file')?></th>
+				<th><?=_('owner')?></th>
 				<th><?=_('read')?></th>
 				<th><?=_('share')?></th>
 				<th><?=_('tag')?></th>
-<?php /*
-				<th><?=_('ressource')?></th>
-*/ ?>
 			</tr>
 		</thead>
 		
@@ -54,22 +54,10 @@
 					<?=$d->name ? shorter($d->name) : shorter($d->path) ?>
 				</a>
 			</td>	
-			<td title="<?=$d->path ?>"><?=shorter($d->path) ?></td>
+			<td class="crop"><?=($d->fk_owner == $c->id) ? _('me') : $d->uname . ' ' . $d->usurname ?></td>
 			<td><?=$d->count ? $d->count : '' ?></td>
 			<td><?=$d->share ? $d->share : '' ?></td>
 			<td><?=$d->sname ?></td>
-<?php /*
-			<td>
-				<?php
-				if( $d->ressource && $d->fk_ressource )
-				{
-					//echo '<nav><a href="' . $d->ressource . '/index/' . $d->fk_ressource . '">'; 
-					echo $d->ressource . $d->fk_ressource;
-					//echo '</a></nav>'; 
-				}
-				?>
-			</td>
-*/ ?>
 		</tr>
 		
 		<?php endforeach ?>

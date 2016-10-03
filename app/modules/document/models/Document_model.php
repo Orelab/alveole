@@ -7,7 +7,15 @@ class Document_model extends MY_Model
 	public $table = 'document'; // nécessaire pour utiliser MY_Model->clean_array()
 
 	
-	public function getDocuments( $id=null, $file=null )
+	/*
+
+		getDocuments(id) : get a document by ID
+		getDocuments(null,string) : get a document by name
+		getDocuments(null,null,id) : get all documents only visible by a specific user
+		getDocuments(id,null,id) : get a documents only if visible by the given user
+
+	*/
+	public function getDocuments( $id=null, $file=null, $restrict_user=null )
 	{
 		if( is_group('client') )
 		{
@@ -41,10 +49,16 @@ class Document_model extends MY_Model
 								'document.file_name',
 								'document.ressource',
 								'document.fk_ressource',
+								'document.fk_owner',
+								'user.id AS uid',
+								'user.uname AS uname',
+								'user.usurname AS usurname',
+								'user.email AS email',
 								'tag.name AS sname'
 								))
 							->from('document')
 							->join('tag', 'document.fk_step = tag.id', 'left')
+							->join('user', 'document.fk_owner = user.id', 'left')
 							->get()
 							->result();
 
@@ -79,6 +93,54 @@ class Document_model extends MY_Model
 				$recordset[$key]->share = 'public';
 			}
 		}
+
+
+
+		//-- check rights
+		
+		/*
+			We have to check four cases to know if a user is allowed to access the file :
+				- Does the current user is an admin ?
+				- Does the current user the owner ?			!!!!!!!!!   NEED TO CODE HERE ! ! ! OWNER NOT SAVED YET ^^'   !!!!!!!!!
+				- Does the file accessible to public ?
+				- Does the file shared with me ?
+		* /
+
+		$allowed = false;
+
+		if( is_group('admin') )
+		{
+			$allowed = true;
+		}
+
+		elseif( $doc[0]->share == "public" )
+		{
+			$allowed = true;
+		}
+
+		else
+		{
+			$this->load->model('share_model');
+			$shares  = $this->share_model->getShares( $doc[0]->id );
+	
+			$user = currentUser();
+			$uid = isset($user->id) ? $user->id : null;
+
+			foreach( $shares as $s )
+			{
+				if( $s->fk_user == $uid )
+				{
+					$allowed = true;
+				}
+			}
+		}
+
+		if( ! $allowed )
+		{
+			die( _('Sorry, you are not allowed.') );
+		}
+
+*/
 
 		return $recordset;
 	}
@@ -156,6 +218,9 @@ class Document_model extends MY_Model
 		{
 			if( ! $updateOnly )
 			{
+				$user = currentUser();
+				$data['fk_owner'] = $user->id;
+
 				if( ! array_key_exists('name',$data) ) $data['name'] = $data['path'];
 				
 				if( $this->db->insert('document', $data) )
