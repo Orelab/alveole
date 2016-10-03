@@ -16,8 +16,8 @@ class Configuration extends MY_Controller
 		$admin_only = array(
 			'general',			'module',
 			'authorization',	'tag',
-			'user',				'role',
-			'log',				'php'
+			'php',				'role',
+			'log'
 		);
 
 		if( in_array($this->router->fetch_method(), $admin_only)
@@ -31,7 +31,7 @@ class Configuration extends MY_Controller
 
 		$this->loadModuleTranslation('configuration');
 
-		if( $this->router->fetch_method() != 'save' )
+		if( ! in_array($this->router->fetch_method(), array('user','save')) )
 		{
 			$this->load->view('configuration/menu');
 		}
@@ -142,7 +142,7 @@ class Configuration extends MY_Controller
 	
 	public function user()
 	{
-		echo modules::run( 'user/user/dashboard' );
+		echo modules::run( 'user/user/current' );
 	}
 	
 	

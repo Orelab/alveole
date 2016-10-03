@@ -13,6 +13,7 @@
 	<p><a href="configuration/general"><?=_('system configuration')?></a></p>
 -->
 	<p><a href="configuration/preference"><?=_('my own preferences')?></a></p>
+	<p><a href="configuration/user/<?=$u->id?>"><?=_('my card')?></a></p>
 	<p><a href="configuration/password/<?=$u->id?>"><?=_('my password')?></a></p>
 
 <?php if( is_group('admin') ): ?>

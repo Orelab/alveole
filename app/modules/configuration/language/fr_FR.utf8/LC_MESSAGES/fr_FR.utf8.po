@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2016-10-03 16:14+0200\n"
-"PO-Revision-Date: 2016-10-03 16:14+0200\n"
+"POT-Creation-Date: 2016-10-03 18:02+0200\n"
+"PO-Revision-Date: 2016-10-03 18:03+0200\n"
 "Last-Translator: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
 "Language-Team: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
 "Language: fr\n"
@@ -28,7 +28,7 @@ msgstr "<p>A venir</p>"
 msgid "manage rights"
 msgstr "gérer les droits"
 
-#: ../../../views/_dashboard.php:4 ../../../views/menu.php:22
+#: ../../../views/_dashboard.php:4 ../../../views/menu.php:23
 msgid "manage tags"
 msgstr "gérer les étiquettes"
 
@@ -113,10 +113,14 @@ msgid "my own preferences"
 msgstr "mes préférences"
 
 #: ../../../views/menu.php:16
+msgid "my card"
+msgstr "Mes infos"
+
+#: ../../../views/menu.php:17
 msgid "my password"
 msgstr "mot de passe"
 
-#: ../../../views/menu.php:23
+#: ../../../views/menu.php:24
 msgid "manage users"
 msgstr "gérer les utilisateurs"
 
@@ -128,43 +132,43 @@ msgstr "langue"
 msgid "wallpaper"
 msgstr "fon d'écran"
 
-#: ../../../views/preference.php:30
+#: ../../../views/preference.php:47
 msgid "all (cyclic)"
 msgstr "tous (rotation)"
 
-#: ../../../views/preference.php:56
+#: ../../../views/preference.php:73
 msgid "mail"
 msgstr "email"
 
-#: ../../../views/preference.php:61
+#: ../../../views/preference.php:78
 msgid "type"
 msgstr "type"
 
-#: ../../../views/preference.php:62
+#: ../../../views/preference.php:79
 msgid "security"
 msgstr "sécurité"
 
-#: ../../../views/preference.php:63
+#: ../../../views/preference.php:80
 msgid "server"
 msgstr "serveur"
 
-#: ../../../views/preference.php:64
+#: ../../../views/preference.php:81
 msgid "port"
 msgstr "port"
 
-#: ../../../views/preference.php:65
+#: ../../../views/preference.php:82
 msgid "login"
 msgstr "identifiant"
 
-#: ../../../views/preference.php:66
+#: ../../../views/preference.php:83
 msgid "password"
 msgstr "mot de passe"
 
-#: ../../../views/preference.php:127
+#: ../../../views/preference.php:144
 msgid "normal"
 msgstr "normal"
 
-#: ../../../views/preference.php:144
+#: ../../../views/preference.php:161
 msgid "mail signature"
 msgstr "signature des emails"
 
