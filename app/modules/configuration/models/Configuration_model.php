@@ -24,9 +24,9 @@ class Configuration_model extends MY_Model
 
 
 	/*
-		This method allow to retrieve the general configuration.
-		General configuration allow to get all the data stored
-		in the configuration table, except all de keys starting
+		This method allows to retrieve the general configuration.
+		General configuration allows to get all the data stored
+		in the configuration table, except all the keys starting
 		with 'user*'.
 		
 		getGeneral() returns the data in an associative array ( k=>v, k=>v )
@@ -64,16 +64,16 @@ class Configuration_model extends MY_Model
 	{
 		if( ! $idUser )
 		{
-			$this->load->model('user/user_model');
-			$user = $this->user_model->currentUser();
+			$user = currentUser();
+
+			if( isset($user->id) )
+				$idUser = $user->id;
+				else
+				$idUser = 'default';	// no user connected : returning default config
 		}
 
-		if( isset($user->id) )
-			$idUser = $user->id;
-			else
-			return false;	// no user connected
 
-		
+
 		if( $idUser == '*' )
 		{
 			$this->db->where('configuration.key LIKE', 'user%' );
@@ -83,8 +83,10 @@ class Configuration_model extends MY_Model
 			$this->db->where_in('configuration.key', array('user'.$idUser,'userdefault') );
 		}
 		
-		$recordset = $this->db->select()
+		$recordset = $this->db
+						->select()
 						->from('configuration')
+						->order_by('key ASC')
 						->get()
 						->result();
 
@@ -92,7 +94,7 @@ class Configuration_model extends MY_Model
 		{
 			$prefs = json_decode( $recordset[0]->value );
 			$prefs->key = $recordset[0]->key;
-			
+
 			return $prefs;
 		}
 		else
@@ -148,8 +150,7 @@ class Configuration_model extends MY_Model
 	{
 		//-- retrieve current user
 		
-		$this->load->model('user_model');
-		$user = $this->user_model->currentUser();
+		$user = currentUser();
 		$userid = $user->id;
 
 		$data = $this->db->select()
@@ -191,12 +192,10 @@ class Configuration_model extends MY_Model
 	public function save()
 	{
 		//-- retrieve user id
-		
-		$this->load->model('user_model');
-		$user = $this->user_model->currentUser();
+
+		$user = currentUser();
 		$userid = $user->id;
 		$userkey = 'user'.$user->id;
-
 		
 		//-- retrieve and merge data
 		

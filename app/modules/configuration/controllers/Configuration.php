@@ -11,7 +11,7 @@ class Configuration extends MY_Controller
 		check_identification();		
 		
 		
-		//-- We protect the list of methods only available to the admin
+		//-- We protect the list of methods only available for admin
 
 		$admin_only = array(
 			'general',			'module',
