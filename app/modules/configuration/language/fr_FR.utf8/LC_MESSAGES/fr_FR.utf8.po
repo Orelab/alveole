@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2016-09-21 13:06+0200\n"
-"PO-Revision-Date: 2016-09-21 13:08+0200\n"
+"POT-Creation-Date: 2016-10-03 16:14+0200\n"
+"PO-Revision-Date: 2016-10-03 16:14+0200\n"
 "Last-Translator: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
 "Language-Team: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
 "Language: fr\n"
@@ -16,7 +16,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPath-1: ../../..\n"
 
-#: ../../../controllers/Configuration.php:149
+#: ../../../controllers/Configuration.php:26
+msgid "Sorry, you are not allowed"
+msgstr "Désolé, vous n'êtes pas autorisé à accéder à cette zone."
+
+#: ../../../controllers/Configuration.php:159
 msgid "<p>Coming soon...</p>"
 msgstr "<p>A venir</p>"
 
@@ -24,7 +28,7 @@ msgstr "<p>A venir</p>"
 msgid "manage rights"
 msgstr "gérer les droits"
 
-#: ../../../views/_dashboard.php:4 ../../../views/menu.php:18
+#: ../../../views/_dashboard.php:4 ../../../views/menu.php:22
 msgid "manage tags"
 msgstr "gérer les étiquettes"
 
@@ -100,19 +104,19 @@ msgstr "contrôleur"
 msgid "parameters"
 msgstr "paramètres"
 
-#: ../../../views/menu.php:12
+#: ../../../views/menu.php:13
 msgid "system configuration"
 msgstr "préférences système"
 
-#: ../../../views/menu.php:13 ../../../views/preference.php:5
+#: ../../../views/menu.php:15 ../../../views/preference.php:5
 msgid "my own preferences"
-msgstr "mes préférences personnelles"
+msgstr "mes préférences"
 
-#: ../../../views/menu.php:14
+#: ../../../views/menu.php:16
 msgid "my password"
-msgstr "mon mot de passe"
+msgstr "mot de passe"
 
-#: ../../../views/menu.php:19
+#: ../../../views/menu.php:23
 msgid "manage users"
 msgstr "gérer les utilisateurs"
 

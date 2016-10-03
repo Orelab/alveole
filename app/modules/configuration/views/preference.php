@@ -27,8 +27,25 @@
 				<h3><?=_('wallpaper')?></h3>
 
 				<div class="wallpapers">
+					<?php
+					
+						$checked = '';
+						
+						if( isset($preferences->wallpaper) )
+						{
+							if( $preferences->wallpaper=="rotate" )
+							{
+								$checked = 'checked="checked"';
+							}
+						}
+						else
+						{
+							$checked = 'checked="checked"';
+						}
+						
+					?>
 					<label for="rotate"><?=_('all (cyclic)')?></label><!--
-					--><input type="radio" id="rotate" name="wallpaper" value="rotate" /><?php
+					--><input type="radio" id="rotate" name="wallpaper" value="rotate" <?=$checked ?> /><?php
 
 						$folder = 'assets/img/wallpapers/';
 						$wallpapers = glob( FCPATH."$folder*.{jpg,png,gif}", GLOB_BRACE );
