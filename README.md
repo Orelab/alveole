@@ -45,7 +45,7 @@ Here are some details about the content of this faile
         password The username's password.
         database The database name.
 
-Then, you'll have to configure the foillowing fields in the database, in order to give Alveole the ability to send email thorw imap :
+Then, you'll have to configure the following fields in the database, in order to give Alveole the ability to send email thorw imap :
 
 	configuration>email_server
 	configuration>email_user

@@ -87,8 +87,8 @@
 				</div>
 
 				<div class="diapo">
-					<p>Merci de votre inscription !</p>
-					<p>Confirmez votre adresse email en visitant votre boite aux lettres avant de continuer !</p>
+					<p><?=_('Thanks for registering !') ?></p>
+					<p><?=_('Please confirm your email before continue.') ?></p>
 				</div>
 				
 				<?php endif; ?>

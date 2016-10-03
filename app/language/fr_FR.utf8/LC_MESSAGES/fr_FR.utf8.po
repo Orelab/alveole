@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Alveole - general\n"
-"POT-Creation-Date: 2016-09-28 11:50+0200\n"
-"PO-Revision-Date: 2016-09-28 11:50+0200\n"
+"POT-Creation-Date: 2016-10-03 15:06+0200\n"
+"PO-Revision-Date: 2016-10-03 15:06+0200\n"
 "Last-Translator: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
 "Language-Team: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
 "Language: fr\n"
@@ -41,7 +41,7 @@ msgstr "mot de passe"
 msgid "Activate your account and enjoy Alveole at :"
 msgstr "Activez votre compte, et profitez d'Alveole à l'adresse suivante :"
 
-#: controllers/Dashboard.php:235
+#: controllers/Dashboard.php:243
 msgid "Thanks for registering"
 msgstr "Merci de vous être enregistré"
 
@@ -81,6 +81,16 @@ msgstr "annuler"
 msgid "subscribe"
 msgstr "inscription"
 
+#: views/connexion.php:90
+msgid "Thanks for registering !"
+msgstr "Merci de votre inscription !"
+
+#: views/connexion.php:91
+msgid "Please confirm your email before continue."
+msgstr ""
+"Confirmez votre adresse email en visitant votre boite aux lettres avant de "
+"continuer !"
+
 #: views/interface.php:73
 msgid ""
 "Warning, the APP folder is located inside the WEB folder. This is a security "
@@ -108,10 +118,10 @@ msgstr "vous embarque pour la Lune !"
 msgid "about"
 msgstr "à propos"
 
-#: views/interface.php:148
+#: views/interface.php:146
 msgid "configuration"
 msgstr "configuration"
 
-#: views/interface.php:152
+#: views/interface.php:147
 msgid "disconnect"
 msgstr "déconnexion"
