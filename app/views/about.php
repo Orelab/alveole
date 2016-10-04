@@ -126,7 +126,7 @@
 
 		<br/>
 
-
+<?php /*
 
 		<h3>Requirements&nbsp;:</h3>
 	
@@ -145,6 +145,6 @@
 
 
 		<p>http://blogs.sitepointstatic.com/examples/tech/css3-starwars/index.html</p>
-
+*/ ?>
 	</div>
 </article>
