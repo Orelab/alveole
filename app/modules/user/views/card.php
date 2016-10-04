@@ -14,11 +14,27 @@
 	);
 
 
-	if( ! is_group('admin') )	
+	/*
+		Prevent non admin users to change can_connect and group
+	*/
+
+	if( ! is_group('admin') )
 		$readonly = 'disabled="disabled"';
 		else
 		$readonly = '';
 
+
+	/*
+		prevent admin users from removing themselves from the admin group
+	*/
+	
+	$u = currentUser();
+	
+	if( is_group('admin') && $u->id==$id )
+	{
+		$readonly = 'disabled="disabled"';
+	}
+	
 
 ?>
 
