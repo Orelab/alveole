@@ -35,6 +35,15 @@
 				me.text(croppedstring + points);
 			}
 
+			
+			// A nodes must be fullwidth blocks
+			
+			if( me[0].tagName == "A" )
+			{
+				me.css({display:'block', width:'100%'});
+			}
+
+
 			$(window).on('resize',doCropField);
 			doCropField();
 		});
