@@ -25,7 +25,9 @@ function can_access( $uid, $did, $arr )
 		?>
 		<input type="checkbox" class="cbsave" id="user<?=$u->id?>" name="share|<?=$id?>|<?=$u->id?>" <?=can_access($u->id,$id,$share) ? 'checked' : '' ?> />
 		<label for="user<?=$u->id?>"><?=$name ?></label>
+		<!--
 		<a href="user/index/<?=$u->id?>" class="ajax" rel="<?=$name ?>"><?=_('see')?></a>
+		-->
 		<br/>
 	
 	<?php endforeach ?>

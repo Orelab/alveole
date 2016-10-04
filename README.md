@@ -57,15 +57,10 @@ Then, you'll have to configure the following fields in the database, in order to
 
 # Default account
 
-Once installed, clic oin the "No account yet ?" link to create your account.
+Once installed, clic on the "No account yet ?" link to create your account.
 If you want to become administrator, simply browse your database (phpMyAdmin or whatever else) to the "user" table,
 and change the "group" value to "admin".
 
-Please note that Alveole is set will a default admin account you could use instead. If you create your own account,
-we greatly encourage you to remove this one ! ! !
-
-- default user : "nobody@alveole.org"
-- default password : "changeyourpasswordfirst!"
 
 
 

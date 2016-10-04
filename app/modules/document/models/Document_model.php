@@ -176,8 +176,6 @@ class Document_model extends MY_Model
 
 		//-- upload and add document
 
-//die( $this->check_file() );
-
 		if( $this->upload->do_upload('file') )
 		{
 			$fileinfo = $this->upload->data();

@@ -449,13 +449,6 @@ CREATE TABLE `user` (
   `activation_key` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Contenu de la table `user`
---
-
-INSERT INTO `user` (`id`, `uname`, `usurname`, `email`, `group`, `fk_project`, `md5pass`, `can_connect`, `business`, `phone`, `address`, `text`, `activation_key`) VALUES
-(1, 'Mickey', 'Mouse', 'nobody@alveole.org', 'admin', 0, '$2y$10$/z20Tehljr8.GC9JTcHMO.mO2tRv4kiiNR4OT3qtw7lB3O5sUVYTW', 1, 'Alveole', '', '', '', '');
-
 -- --------------------------------------------------------
 
 --
