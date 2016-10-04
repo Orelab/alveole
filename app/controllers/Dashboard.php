@@ -193,64 +193,32 @@ class Dashboard extends MY_Controller
 		$_POST['can_connect'] = '0';
 		$_POST['activation_key'] =  bin2hex( openssl_random_pseudo_bytes(25) );
 	
-		$email = $this->input->post('email');
+		$to = $this->input->post('email');
 
 		$this->load->model('user/user_model');
-		$user = $this->user_model->getUser(null, $email);
+		$user = $this->user_model->getUser(null, $to);
 
 		if( count($user) )
 		{
 			die( _('Sorry, you should use another mail address !') );
 		}
 
+		$subject = _('Thanks for registering');
+
 		$url = site_url() . 'dashboard/activate/' . $_POST['activation_key'];
 
 		$body = '
 			<p>' . _('Thank you for registering ! Here are your personal data :') . '</p>
 			<ul>
-				<li>' . _('Email') . ' : ' . $email . '</li>
+				<li>' . _('Email') . ' : ' . $to . '</li>
 				<li>' . _('Password') . ' : ' . $_POST['md5pass'] . '</li>
 			</ul>
 			<p>' . _('Activate your account and enjoy Alveole at :') . '<br/>
 			<a href="' . $url . '">' . $url . '</a></p>
 		';
 
-		require APPPATH . 'libraries/PHPMailer-master/PHPMailerAutoload.php';
+		$res = send_email( $subject, $body, $to );
 		
-		$mail = new PHPMailer;
-
-		/*
-			0 = debug disabled
-			1 = errors + server responses
-			2 = errors + server responses + client messages
-		*/
-		$mail->SMTPDebug = 0;
-
-
-		$mail->isSMTP();
-		$mail->Host = $config['email_server'];
-		$mail->SMTPAuth = true;
-		$mail->Username = $config['email_user'];
-		$mail->Password = $config['email_password'];
-		$mail->SMTPSecure = $config['email_security'];
-		$mail->Port = $config['email_port'];
-		
-		$mail->From = $config['email_user'];
-		$mail->FromName = 'Alveole';
-		$mail->addAddress( $email );
-		$mail->isHTML(true);
-		
-		$mail->Subject = _('Thanks for registering');
-		$mail->Body    = $body;
-		$mail->AltBody = strip_tags( $body );
-
-		$mail->setLanguage('fr', 'application/libraries/PHPMailer-master/language/phpmailer.lang-fr.php');		
-
-		if( $mail->send() != '1' )
-		{
-			$mail->ErrorInfo;
-		}
-
 		$save = $this->user_model->save();
 		die( $save=='1' ? 'ok' : $save );
 	}

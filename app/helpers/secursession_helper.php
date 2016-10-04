@@ -9,7 +9,7 @@
 
 //-- return the currently connected user
 
-if ( ! function_exists('connected') )
+if ( ! function_exists('currentUser') )
 {
 	function currentUser()
 	{

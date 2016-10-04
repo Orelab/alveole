@@ -29,36 +29,6 @@ if ( ! function_exists('trace') )
 
 
 
-/*
-	Previous translation system (CI) replaced by PHP gettext)
-
-if ( ! function_exists('trad') )
-{
-	function trad( $original )
-	{
-		$CI = get_instance();
-		$traduction = $CI->lang->line( $original );
-		
-		return $traduction ? $traduction : $original;
-	}
-}	
-*/
-
-
-/*
-if ( ! function_exists('extension') )
-{
-	function extension( $file )
-	{
-		return pathinfo($file, PATHINFO_EXTENSION);
-		
-		$spl = new SplFileInfo( $file );
-		return $spl->getExtension();
-	}
-}	
-*/
-
-
 
 if ( ! function_exists('mime_decode') )
 {
@@ -84,4 +54,57 @@ if ( ! function_exists('mime_decode') )
 		return $string;
 	}
 }
+
+
+
+
+
+
+if ( ! function_exists('send_email') )
+{
+	function send_email( $subject, $body, $to )
+	{
+		$CI = get_instance();
+		$CI->load->model('configuration/configuration_model');
+		$config = $CI->configuration_model->getGeneral();
+
+		require APPPATH . 'libraries/PHPMailer-master/PHPMailerAutoload.php';
+		
+		$mail = new PHPMailer;
+
+		/*
+			0 = debug disabled
+			1 = errors + server responses
+			2 = errors + server responses + client messages
+		*/
+		$mail->SMTPDebug = 0;
+
+		$mail->isSMTP();
+		$mail->isHTML(true);
+		$mail->SMTPAuth = true;
+
+		$mail->Host = $config['email_server'];
+		$mail->Username = $config['email_user'];
+		$mail->Password = $config['email_password'];
+		$mail->SMTPSecure = $config['email_security'];
+		$mail->Port = $config['email_port'];
+		
+		$mail->From = $config['email_user'];
+		$mail->FromName = 'Alveole';
+
+		$mail->addAddress( $to );
+		$mail->Subject = $subject;
+		$mail->Body    = $body;
+		$mail->AltBody = strip_tags( $body );
+
+		$mail->setLanguage('fr', 'application/libraries/PHPMailer-master/language/phpmailer.lang-fr.php');		
+
+
+		// return true, or the error message
+		
+		return ( $mail->send()==1 ) ?: $mail->ErrorInfo;
+	}
+}
+
+
 
