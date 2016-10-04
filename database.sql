@@ -92,6 +92,7 @@ CREATE TABLE `configuration` (
 
 INSERT INTO `configuration` (`key`, `value`, `type`) VALUES
 ('allow_self_registration', '1', 'boolean'),
+('notification_on_registration', '1', 'boolean'),
 ('currency', '&euro;', 'text'),
 ('default_language', 'en_EN.utf8', 'text'),
 ('harddrive', '500', 'text'),
@@ -182,6 +183,7 @@ CREATE TABLE `document` (
   `file_name` text,
   `ressource` text,
   `fk_ressource` int(11) DEFAULT NULL,
+  `fk_owner` int(11) DEFAULT NULL,
   `count` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

@@ -218,7 +218,27 @@ class Dashboard extends MY_Controller
 		';
 
 		$res = send_email( $subject, $body, $to );
+
+
+		// admin notification
 		
+		if( $config['notification_on_registration'] )
+		{
+			$admin_subject = _('New user registration');
+			$admin_body = _('A new user registered : ') . $to;
+			
+			$admins = $this->user_model->getUsers(null, false, 'admin');
+			$admin_to = array();
+			
+			foreach( $admins as $a )
+			{
+				$admin_to[] = $a->email;
+			}
+			
+			send_email( $admin_subject, $admin_body, $admin_to );
+		}
+
+
 		$save = $this->user_model->save();
 		die( $save=='1' ? 'ok' : $save );
 	}

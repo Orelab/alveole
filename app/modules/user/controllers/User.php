@@ -13,26 +13,6 @@ class User extends MY_Controller
 		//-- Load language
 		$this->loadModuleTranslation('user');
 
-
-/*
-		$id = $this->uri->segment(3);
-
-		if( $id>0 )
-		{
-			$this->load->model('user_model');
-			$user = $this->user_model->getUsers( $id );
-			$user = $user ? $user[0] : null;
-			$name = $user->uname .' '. $user->usurname;
-
-		//	$this->menu( $id, $name?$name:'Contacts' );
-
-			$this->load->view('user/menu', array(
-				'name' => $name?$name:'Contact',
-				'mail' => $user->email,
-				'id' => $id
-			));
-		}
-*/
 	}
 
 

@@ -92,7 +92,18 @@ if ( ! function_exists('send_email') )
 		$mail->From = $config['email_user'];
 		$mail->FromName = 'Alveole';
 
-		$mail->addAddress( $to );
+		if( is_array($to) )
+		{
+			foreach( $to as $t )
+			{
+				$mail->addAddress( $t );
+			}
+		}
+		else
+		{
+			$mail->addAddress( $to );
+		}
+
 		$mail->Subject = $subject;
 		$mail->Body    = $body;
 		$mail->AltBody = strip_tags( $body );

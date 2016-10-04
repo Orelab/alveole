@@ -33,13 +33,18 @@ class User_model extends MY_Model
 
 
 
-	public function getUsers( $id=null, $addRoles=false )
+	public function getUsers( $id=null, $addRoles=false, $group=null )
 	{
 		$this->load->model('user/role_model');
 
 		if( $id )
 		{
 			$this->db->where('id', $id );
+		}
+		
+		if( $group )
+		{
+			$this->db->where('group', $group );
 		}
 		
 		$recordset = $this->db->get('user')->result();
@@ -80,13 +85,6 @@ class User_model extends MY_Model
 	
 	public function currentUser( $fk_project=null )
 	{
-/*
-		$this->load->library('session');
-		return (object)array( 
-			'id' => $this->session->userid
-		);
-*/
-
 		//-- first, try to retrieve the customer associated to the given project
 		
 		if( $fk_project )
