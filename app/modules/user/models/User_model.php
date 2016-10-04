@@ -170,10 +170,26 @@ class User_model extends MY_Model
 							}
 						}
 					break;
-					
+				
 				case 'verif' :
 					break;
-					
+				
+				
+
+				/*
+					'group' and 'can_connect' can only be changed by an admin for security reasons
+					'email' too for administrative reasons (it is used as the login and must be unique)
+				*/
+
+				case 'group' :
+				case 'can_connect' :
+				case 'email' :
+					if( is_group('admin') )
+					{
+						$data[$key] = $val;
+					}
+
+
 				default :
 					$data[$key] = $val;
 			}

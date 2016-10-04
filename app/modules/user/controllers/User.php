@@ -78,10 +78,15 @@ class User extends MY_Controller
 	
 	public function dashboard()
 	{
+		//-- trick to load a menu from another module with its translation
+		
+		$this->loadModuleTranslation('configuration');
+		$this->load->view('configuration/menu');
+		$this->loadModuleTranslation('user');
+
+
 		$this->load->model('user/user_model');
 		$this->load->model('user/role_model');
-
-	//	$this->menu();
 		
 		$this->load->view('user/dashboard', array(
 			'user'		=> $this->user_model->getUsers(null, true),

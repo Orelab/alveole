@@ -140,9 +140,12 @@ class Configuration extends MY_Controller
 	}
 	
 	
-	public function user()
+	public function user( $id=null )
 	{
-		echo modules::run( 'user/user/current' );
+		if( $id )
+			echo modules::run( 'user/user/current' );
+			else
+			echo modules::run( 'user/user/dashboard' );
 	}
 	
 	

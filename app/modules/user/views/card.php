@@ -14,6 +14,12 @@
 	);
 
 
+	if( ! is_group('admin') )	
+		$readonly = 'disabled="disabled"';
+		else
+		$readonly = '';
+
+
 ?>
 
 
@@ -57,8 +63,8 @@
 	</p>
 
 	<p>
-		<label for="email"><?=_('mail')?></label>
-		<input type="text" name="email" value="<?=$email ?>" />
+		<label for="email"><?=_('email')?></label>
+		<input type="text" name="email" value="<?=$email ?>" <?=$readonly?> />
 	</p>
 
 	<p>
@@ -84,14 +90,14 @@
 	
 	<p>
 		<label for="can_connect"><?=_('allowed to connect')?></label>
-		<select name="can_connect">		
+		<select name="can_connect" <?=$readonly?> >		
 			<?=optionsHtml( $radio, $can_connect, false ) ?>
 		</select>
 	</p>
 	
 	<p>
 		<label for="group"><?=_('group')?></label>
-		<select name="group">		
+		<select name="group" <?=$readonly?> >		
 			<?=optionsHtml( $groupes, $group, true ) ?>
 		</select>
 	</p>
