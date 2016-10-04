@@ -68,6 +68,13 @@ class User extends MY_Controller
 		$this->card( $id );
 	}
 	
+
+	public function current()
+	{
+		$user = currentUser();
+		$this->card( $user->id );
+	}
+	
 	
 	public function dashboard()
 	{
@@ -97,11 +104,10 @@ class User extends MY_Controller
 	public function card( $id )
 	{
 		//-- trick to load a menu from another module with its translation
-
+		
 		$this->loadModuleTranslation('configuration');
 		$this->load->view('configuration/menu');
 		$this->loadModuleTranslation('user');
-		
 
 		$this->load->model('project/project_model');
 		$this->load->model('user_model');

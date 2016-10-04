@@ -5,7 +5,8 @@
 @media (max-width: 820px) {
 
 	#connexion>body {
-		background: url(../img/overlay.png) repeat;
+		background: rgba(0,0,0,.5);
+		bbackground: url(../img/overlay.png) repeat;
 	}
 
 	#connexion body>div {
