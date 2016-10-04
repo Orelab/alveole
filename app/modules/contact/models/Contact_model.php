@@ -4,14 +4,11 @@
 
 class Contact_model extends MY_Model
 {
-	public $table = 'contact_meta'; // nécessaire pour utiliser MY_Model->clean_array()
+	public $table = 'contact_meta'; // see MY_Model->clean_array()
 
 
 
-
-
-
-	public function getContacts( $id=null, $addRoles=false )
+	public function getContacts( $id=null )
 	{
 		$me = currentUser();		
 
@@ -40,33 +37,8 @@ class Contact_model extends MY_Model
 			add_object_property( $r, 'meta', json_encode($meta) );
 		}
 
-
-		//-- add roles if needed
-		
-		if( $addRoles )
-		{
-			$this->load->model('contact/role_model');
-
-			foreach( $recordset as $key => $val )
-			{
-				$roles = $this->role_model->getRoles( null, $val->id );
-
-				$step_name_list = array();
-				$step_id_list = array();
-				
-				foreach( $roles as $r )
-				{
-					$step_name_list[] = $r->sname;
-					$step_id_list[] = $r->sname;
-				}
-				add_object_property( $recordset[$key], 'role', implode('|',array_unique($step_name_list))   );
-				add_object_property( $recordset[$key], 'roleid', implode('|',array_unique($step_id_list))   );
-			}
-		}
-
 		return $recordset;
 	}
-
 
 	
 	
@@ -100,8 +72,6 @@ class Contact_model extends MY_Model
 
 
 
-
-
 	public function save_meta()
 	{
 		$id = $this->input->post('id');
@@ -118,7 +88,6 @@ class Contact_model extends MY_Model
 		
 		return $response;
 	}
-
 
 
 

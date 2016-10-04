@@ -1,9 +1,9 @@
 <?php
-
+/*
 	$CI =& get_instance();
 	$CI->load->model('user_model');
 	$u = $CI->user_model->currentUser();	
-
+*/
 ?>
 
 <h1><?=_('directory')?></h1>
@@ -40,16 +40,16 @@
 			</tr>
 		</thead>
 		
-		<?php foreach( $contact as $u ): 
+		<?php foreach( $contact as $c ): 
 		
-			$rname = $u->surname. ' ' . $u->name;
-			$name = $u->name. ' ' . $u->surname;
+			$rname = $c->surname. ' ' . $c->name;
+			$name = $c->name. ' ' . $c->surname;
 		?>
 	
 		<tr>
-			<td><a href="contact/index/<?=$u->id ?>" class="visit" rel="<?=$name ?>" class="watch"><?=$u->surname ?></a></td>	
-			<td><a href="contact/index/<?=$u->id ?>" class="visit" rel="<?=$name ?>"><?=$u->name ?></a></td>
-			<td><?=$u->mail ?></td>
+			<td><a href="contact/index/<?=$c->id ?>" class="visit" rel="<?=$name ?>" class="watch"><?=$c->surname ?></a></td>	
+			<td><a href="contact/index/<?=$c->id ?>" class="visit" rel="<?=$name ?>"><?=$c->name ?></a></td>
+			<td><?=$c->mail ?></td>
 		</tr>
 		
 		<?php endforeach ?>

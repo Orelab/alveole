@@ -222,7 +222,7 @@ class Dashboard extends MY_Controller
 
 		// admin notification
 		
-		if( $config['notification_on_registration'] )
+		if( isset($config['notification_on_registration']) && $config['notification_on_registration'] )
 		{
 			$admin_subject = _('New user registration');
 			$admin_body = _('A new user registered : ') . $to;

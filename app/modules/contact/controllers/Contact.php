@@ -70,7 +70,7 @@ class Contact extends MY_Controller
 		$this->load->model('contact/contact_model');
 
 		$this->load->view('contact/dashboard', array(
-			'contact'		=> $this->contact_model->getContacts(null, true)
+			'contact'		=> $this->contact_model->getContacts()
 		));
 	}
 

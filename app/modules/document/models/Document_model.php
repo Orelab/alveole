@@ -4,24 +4,25 @@
 
 class Document_model extends MY_Model
 {
-	public $table = 'document'; // nécessaire pour utiliser MY_Model->clean_array()
+	public $table = 'document'; // see MY_Model->clean_array()
+
+
 
 	
 	/*
-
 		getDocuments(id) : get a document by ID
 		getDocuments(null,string) : get a document by name
 		getDocuments(null,null,id) : get all documents only visible by a specific user
 		getDocuments(id,null,id) : get a documents only if visible by the given user
 
 	*/
-	public function getDocuments( $id=null, $file=null, $restrict_user=null )
+	public function getDocuments( $id=null, $file=null, $restrict_user=true )
 	{
+		$this->load->model('user_model');
+		$user = $this->user_model->currentUser();
+
 		if( is_group('client') )
 		{
-			$this->load->model('user_model');
-			$user = $this->user_model->currentUser();
-
 			$this->db->where('share.fk_user', $user->id )
 						->join('share', 'document.id = share.fk_document', 'left');
 		}
@@ -63,7 +64,7 @@ class Document_model extends MY_Model
 							->result();
 
 
-		// append total shares
+		//-- append total shares
 										
 		foreach( $recordset as $key => $val )
 		{
@@ -78,7 +79,7 @@ class Document_model extends MY_Model
 		}
 
 
-		// public share ?
+		//-- public share ?
 										
 		foreach( $recordset as $key => $val )
 		{
@@ -95,59 +96,61 @@ class Document_model extends MY_Model
 		}
 
 
+		//-- right management
 
-		//-- check rights
-		
 		/*
-			We have to check four cases to know if a user is allowed to access the file :
-				- Does the current user is an admin ?
-				- Does the current user the owner ?			!!!!!!!!!   NEED TO CODE HERE ! ! ! OWNER NOT SAVED YET ^^'   !!!!!!!!!
+			We have to check three cases to know if a user is allowed to access the file :
 				- Does the file accessible to public ?
+				- Does the current user the owner ?
 				- Does the file shared with me ?
-		* /
+		*/
 
-		$allowed = false;
-
-		if( is_group('admin') )
-		{
-			$allowed = true;
-		}
-
-		elseif( $doc[0]->share == "public" )
-		{
-			$allowed = true;
-		}
-
-		else
+		if( $restrict_user != null )
 		{
 			$this->load->model('share_model');
-			$shares  = $this->share_model->getShares( $doc[0]->id );
-	
-			$user = currentUser();
-			$uid = isset($user->id) ? $user->id : null;
 
-			foreach( $shares as $s )
+			foreach( $recordset as $key => $val )
 			{
-				if( $s->fk_user == $uid )
+				$allowed = false;
+
+				if( $val->share == "public" )			// public ?
 				{
 					$allowed = true;
+				}
+				
+				elseif( $val->fk_owner == $user->id )	// owner ?
+				{
+					$allowed = true;
+				}
+				
+				else												// shared with current user ?
+				{
+					$shares  = $this->share_model->getShares( $val->id );
+
+					foreach( $shares as $s )
+					{
+						if( $s->fk_user == $user->id )
+						{
+							$allowed = true;
+						}
+					}
+				}
+
+				if( ! $allowed )
+				{
+					unset( $recordset[$key] );
 				}
 			}
 		}
 
-		if( ! $allowed )
-		{
-			die( _('Sorry, you are not allowed.') );
-		}
-
-*/
 
 		return $recordset;
 	}
 	
 	
 	
-	
+
+
 	
 	public function increaseCounter( $id )
 	{
