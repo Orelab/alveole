@@ -68,7 +68,7 @@ if ( ! function_exists('send_email') )
 		$CI->load->model('configuration/configuration_model');
 		$config = $CI->configuration_model->getGeneral();
 
-		require APPPATH . 'libraries/PHPMailer-master/PHPMailerAutoload.php';
+		require_once APPPATH . 'libraries/PHPMailer-master/PHPMailerAutoload.php';
 		
 		$mail = new PHPMailer;
 
