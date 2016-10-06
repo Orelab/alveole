@@ -1,0 +1,128 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Alveole - general\n"
+"POT-Creation-Date: 2016-10-05 16:52+0200\n"
+"PO-Revision-Date: 2016-10-03 15:06+0200\n"
+"Last-Translator: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
+"Language-Team: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: controllers\n"
+"X-Poedit-SearchPath-1: views\n"
+
+#: controllers/Dashboard.php:185
+msgid "Sorry, you are not allowed to register by yourself !"
+msgstr ""
+"Désolé, vous n'avez pas l'autorisation de vous enregistrer sur ce site !"
+
+#: controllers/Dashboard.php:203
+msgid "Sorry, you should use another mail address !"
+msgstr "Merci d'utiliser une autre adresse !"
+
+#: controllers/Dashboard.php:209
+msgid "Thank you for registering ! Here are your personal data :"
+msgstr "Merci de vous être enregistré ! Voici vos données personnelles :"
+
+#: controllers/Dashboard.php:211
+msgid "Email"
+msgstr "email"
+
+#: controllers/Dashboard.php:212
+msgid "Password"
+msgstr "mot de passe"
+
+#: controllers/Dashboard.php:214
+msgid "Activate your account and enjoy Alveole at :"
+msgstr "Activez votre compte, et profitez d'Alveole à l'adresse suivante :"
+
+#: controllers/Dashboard.php:243
+msgid "Thanks for registering"
+msgstr "Merci de vous être enregistré"
+
+#: views/about.php:5
+msgid "about this software"
+msgstr "à propos de ce logiciel"
+
+#: views/connexion.php:41 views/connexion.php:78
+msgid "email"
+msgstr "email"
+
+#: views/connexion.php:46
+msgid "password"
+msgstr "mot de passe"
+
+#: views/connexion.php:52
+msgid "Let's go working !"
+msgstr "C'est l'heure de bosser !"
+
+#: views/connexion.php:57
+msgid "No account yet ?"
+msgstr "Pas encore de compte ?"
+
+#: views/connexion.php:68
+msgid "first name"
+msgstr "prénom"
+
+#: views/connexion.php:73
+msgid "name"
+msgstr "nom"
+
+#: views/connexion.php:83
+msgid "cancel"
+msgstr "annuler"
+
+#: views/connexion.php:84
+msgid "subscribe"
+msgstr "inscription"
+
+#: views/connexion.php:90
+msgid "Thanks for registering !"
+msgstr "Merci de votre inscription !"
+
+#: views/connexion.php:91
+msgid "Please confirm your email before continue."
+msgstr ""
+"Confirmez votre adresse email en visitant votre boite aux lettres avant de "
+"continuer !"
+
+#: views/interface.php:73
+msgid ""
+"Warning, the APP folder is located inside the WEB folder. This is a security "
+"hole. Please contact an administrator."
+msgstr ""
+"Attention : le dossier APPLICATION est situé à l'intérieur du dossier RACINE "
+"du site. Ceci présente un risque de sécurité. Merci de prévenir un "
+"administrateur."
+
+#: views/interface.php:85
+msgid ""
+"Warning, default admin account is active. This is a major security hole as "
+"the password is public. Please change the password or remove this account "
+"after creating your own account."
+msgstr ""
+"Attention, le compte par défaut est actif. Ceci est une faille de sécurité "
+"majeure. Vous êtes invité à changer le mot de passe de ce compte, ou à "
+"détruire ce compte après vous être créé votre propre compte."
+
+#: views/interface.php:142
+msgid "takes you to the moon !"
+msgstr "vous embarque pour la Lune !"
+
+#: views/interface.php:145
+msgid "about"
+msgstr "à propos"
+
+#: views/interface.php:146
+msgid "configuration"
+msgstr "configuration"
+
+#: views/interface.php:147
+msgid "disconnect"
+msgstr "déconnexion"

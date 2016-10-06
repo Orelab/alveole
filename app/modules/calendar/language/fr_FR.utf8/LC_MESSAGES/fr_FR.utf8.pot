@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-09-17 10:05+0200\n"
+"PO-Revision-Date: 2016-09-17 17:15+0200\n"
+"Last-Translator: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
+"Language-Team: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ../../..\n"
+
+#: ../../../controllers/Calendar.php:36 ../../../views/dashboard.php:4
+msgid "calendar"
+msgstr "calendrier"
+
+#: ../../../controllers/Calendar.php:44 ../../../controllers/Calendar.php:93
+msgid "today"
+msgstr "Aujourd'hui"
+
+#: ../../../views/event.php:4
+msgid "none"
+msgstr "aucune"
+
+#: ../../../views/event.php:5
+msgid "day"
+msgstr "jour"
+
+#: ../../../views/event.php:6
+msgid "week"
+msgstr "semaine"
+
+#: ../../../views/event.php:7
+msgid "month"
+msgstr "mois"
+
+#: ../../../views/event.php:8
+msgid "year"
+msgstr "année"
+
+#: ../../../views/event.php:22
+msgid "description"
+msgstr "description"
+
+#: ../../../views/event.php:27
+msgid "tag"
+msgstr "étiquette"
+
+#: ../../../views/event.php:33
+msgid "whole day"
+msgstr "journée entière"
+
+#: ../../../views/event.php:37
+msgid "start"
+msgstr "début"
+
+#: ../../../views/event.php:41
+msgid "end"
+msgstr "fin"
+
+#: ../../../views/event.php:45
+msgid "recurrence"
+msgstr "récurrence"
+
+#: ../../../views/event.php:51
+msgid "step"
+msgstr "intervalle"
+
+#: ../../../views/event.php:55
+msgid "term"
+msgstr "échéance"
+
+#~ msgid "non"
+#~ msgstr "non"

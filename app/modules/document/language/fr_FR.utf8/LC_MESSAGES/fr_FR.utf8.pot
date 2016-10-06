@@ -1,0 +1,158 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Alveole - document\n"
+"POT-Creation-Date: 2016-10-03 19:35+0200\n"
+"PO-Revision-Date: 2016-10-03 19:35+0200\n"
+"Last-Translator: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
+"Language-Team: Aurélien Chirot <aurelien.chirot@idee-lab.fr>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ../../..\n"
+
+#: ../../../controllers/Document.php:46 ../../../controllers/Document.php:67
+msgid "files"
+msgstr "documents"
+
+#: ../../../controllers/Document.php:72 ../../../views/menu.php:9
+msgid "download"
+msgstr "télécharger"
+
+#: ../../../controllers/Document.php:220
+msgid "This file has been deleted !"
+msgstr "Ce document a été supprimé !"
+
+#: ../../../controllers/Document.php:241
+msgid "file deleted"
+msgstr "document supprimé"
+
+#: ../../../views/card.php:20
+msgid "Download a new file"
+msgstr "Télécharger un nouveau document"
+
+#: ../../../views/card.php:39 ../../../views/dashboard.php:41
+msgid "title"
+msgstr "titre"
+
+#: ../../../views/card.php:46 ../../../views/dashboard.php:45
+msgid "tag"
+msgstr "étiquette"
+
+#: ../../../views/card.php:53 ../../../views/menu.php:5
+msgid "file"
+msgstr "document"
+
+#: ../../../views/card.php:67
+msgid "format"
+msgstr "format"
+
+#: ../../../views/card.php:72
+msgid "posting date"
+msgstr "date de mise en ligne"
+
+#: ../../../views/card.php:77
+msgid "last update"
+msgstr "dernière mise à jour"
+
+#: ../../../views/card.php:82
+msgid "number of downloads"
+msgstr "nombre de téléchargements"
+
+#: ../../../views/card.php:83
+msgid "none"
+msgstr "aucun"
+
+#: ../../../views/dashboard.php:12
+msgid "new file"
+msgstr "nouveau document"
+
+#: ../../../views/dashboard.php:21
+msgid "search"
+msgstr "rechercher"
+
+#: ../../../views/dashboard.php:42
+msgid "owner"
+msgstr "propriétaire"
+
+#: ../../../views/dashboard.php:43
+msgid "read"
+msgstr "lu"
+
+#: ../../../views/dashboard.php:44
+msgid "share"
+msgstr "partages"
+
+#: ../../../views/dashboard.php:57
+msgid "me"
+msgstr "moi"
+
+#: ../../../views/download.php:4
+msgid "download log"
+msgstr "journal des téléchargements"
+
+#: ../../../views/download.php:17
+msgid "file id"
+msgstr "ID document"
+
+#: ../../../views/download.php:18
+msgid "date"
+msgstr "date"
+
+#: ../../../views/download.php:19
+msgid "IP"
+msgstr "IP"
+
+#: ../../../views/download.php:20
+msgid "HTTP request"
+msgstr "requête HTTP"
+
+#: ../../../views/download.php:21
+msgid "user"
+msgstr "utilisateur"
+
+#: ../../../views/download.php:22
+msgid "latitude/longitude"
+msgstr "latitude/longitude"
+
+#: ../../../views/download.php:22
+msgid "location"
+msgstr "localisation"
+
+#: ../../../views/download.php:31
+msgid "not connected"
+msgstr "non connecté"
+
+#: ../../../views/download.php:32
+msgid "unknown"
+msgstr "inconnue"
+
+#: ../../../views/menu.php:6 ../../../views/share.php:20
+msgid "shares"
+msgstr "partages"
+
+#: ../../../views/menu.php:7
+msgid "downloads"
+msgstr "téléchargements"
+
+#: ../../../views/share.php:28
+msgid "see"
+msgstr "voir"
+
+#: ../../../views/share.php:36
+msgid "public acces"
+msgstr "accès public"
+
+#~ msgid "Sorry, you are not allowed."
+#~ msgstr "Désolé, vous n'êtes pas autorisé à accéder à cette zone."
+
+#~ msgid "ressource"
+#~ msgstr "ressource"
+
+#~ msgid "Coming soon"
+#~ msgstr "Bientôt"
