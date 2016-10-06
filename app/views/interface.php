@@ -1,5 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 	$CI =& get_instance();
 	$CI->load->helper('secursession');
 
@@ -10,6 +11,7 @@
 
 	$CI->load->model('user/user_model');
 	$defuser = $CI->user_model->identify( 'nobody@alveole.org', 'changeyourpasswordfirst!' );
+
 
 ?><!DOCTYPE html>
 <html lang="<?=$lang?>">

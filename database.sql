@@ -96,6 +96,7 @@ INSERT INTO `configuration` (`key`, `value`, `type`) VALUES
 ('currency', '&euro;', 'text'),
 ('default_language', 'en_EN.utf8', 'text'),
 ('harddrive', '500', 'text'),
+('logo', 'assets/img/logo4-2-2.png', 'text'),
 ('show_warning', '1', 'boolean'),
 ('user1', '{"language":"en_EN.utf8","wallpaper":"rotate","mbox":{},"signature":""}', 'hidden'),
 ('userdefault', '{"language":"en_EN.utf8","mbox":[],"signature":""}', 'hidden'),
