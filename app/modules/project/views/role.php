@@ -12,7 +12,6 @@ if( isset($me) )
 
 }
 
-
 ?>
 
 
@@ -55,12 +54,10 @@ if( isset($me) )
 				</select>
 			</td>
 			<td>
-				<?php if( isset($projadmin) ): ?>
+				<?php if( $projadmin ): ?>
 
 				<input type="hidden" name="id" value="<?=$u->id ?>" />
-<!--
-				<button class="save">user/role|<?=$u->id ?>|SAVErole<?=$u->id ?></button>
--->
+
 				<button class="ajax icosave" 
 					data-href="user/role/save/<?=$u->id ?>" 
 					data-post="SAVErole<?=$u->id ?>" 
@@ -77,7 +74,7 @@ if( isset($me) )
 		<?php endforeach ?>
 
 
-		<?php if( isset($projadmin) ): ?>
+		<?php if( $projadmin ): ?>
 		
 		<tr id="SAVEroleNew">
 			<td>
@@ -96,9 +93,6 @@ if( isset($me) )
 				</select>
 			</td>
 			<td>
-<!--
-				<button class="save">user/role|-1|SAVEroleNew</button>
--->
 				<button class="ajax icosave" 
 					data-href="user/role/save/-1" 
 					data-post="SAVEroleNew" 

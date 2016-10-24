@@ -7,9 +7,10 @@ class Project_model extends MY_Model
 	public $table = 'project'; // nécessaire pour utiliser MY_Model->clean_array()
 	
 
-	public function getProjects( $id=null, $apikey=null )
+	public function getProjects( $id=null, $apikey=null, $use_roles=true )
 	{
 		$this->load->model('project/ticket_model');
+		$user = currentUser();
 
 		
 		// restrictions for all
@@ -43,6 +44,16 @@ class Project_model extends MY_Model
 		if( $apikey != null )
 		{
 			$this->db->where('project.apikey', $apikey );
+		}
+		
+
+		// Role management
+
+		if( $use_roles )
+		{
+			$this->db->join('role', 'project.id = role.fk_project AND role.fk_user = '.$user->id );
+//			$this->db->where('role.fk_step', '>0' );
+			$this->db->where('role.on', 1 );
 		}
 
 		

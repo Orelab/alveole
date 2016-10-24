@@ -89,8 +89,9 @@ class Role_model extends MY_Model
 	public function delete()
 	{
 		$id = $this->input->post('id');
-		
-		if( $this->db->update('role',array('on'=>0),array('id'=>$id) ) ) 
+
+		if( $this->db->delete('role', array('id' => $id)) )		
+		//if( $this->db->update('role', array('on'=>0),array('id'=>$id) ) ) 
 			return $id;
 			else
 			return $this->db->_error_message();

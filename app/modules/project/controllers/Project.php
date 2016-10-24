@@ -173,7 +173,7 @@ class Project extends MY_Controller
 	{
 		$this->load->model('project_model');
 		$this->load->model('user/user_model');
-		$this->load->model('contact/role_model');
+		$this->load->model('user/role_model');
 		$this->load->model('tag_model');
 
 		$projects = $this->project_model->getProjects( $id );
